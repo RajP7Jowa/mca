@@ -2,102 +2,150 @@
 <html>
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="./prism/prism.css">
-	<script src="./prism/prism.js"></script>
-	<style>
-		#KriShInput {
-			background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' enable-background='new 0 0 505.054 505.054' height='30' viewBox='0 0 505.054 505.054' width='30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m305.326 52.343c-69.735-69.735-183.204-69.736-252.94 0-33.782 33.782-52.386 78.697-52.386 126.471 0 98.848 79.993 178.856 178.856 178.856 47.774 0 92.688-18.604 126.47-52.386 69.736-69.736 69.736-183.204 0-252.941z' fill='%23a2d0f9'/%3E%3Cpath d='m487.66 403.493-62.458-62.459c-23.193-23.192-60.932-23.192-84.125 0-23.193 23.193-23.193 60.932 0 84.125l62.458 62.458c23.192 23.193 60.931 23.194 84.124 0 23.194-23.192 23.194-60.931.001-84.124z' fill='%2380b9ed'/%3E%3Cpath d='m425.201 341.034c-23.193-23.192-60.932-23.192-84.125 0-23.193 23.193-23.193 60.932 0 84.125l38.74 38.739c13.876-3.454 27.134-13.494 38.395-33.485 12.747-22.628 24.576-43.214 34.91-61.459z' fill='%238bc4ff'/%3E%3Cpath d='m74.115 323.826c69.007 50.066 167.45 45.22 231.211-18.542 47.969-47.969 62.941-116.631 44.917-177.518-28.488 20.775-59.853 52.575-89.918 101.272-51.046 82.68-128.437 97.541-186.21 94.788z' fill='%238bc4ff'/%3E%3Cpath d='m52.385 52.343c-29.536 29.537-47.468 67.584-51.509 108.612 46.143-11.394 93.818-17.382 133.27-9.663 58.117 11.371 136.897-22.033 200.962-59.551-57.599-103.448-198.847-123.273-282.723-39.398z' fill='%23b4dcf9'/%3E%3Cpath d='m487.66 403.493-62.458-62.459c-19.274-19.273-48.584-22.514-71.253-9.755l-37.821-37.821c58.713-70.197 55.121-175.192-10.802-241.115-69.735-69.735-183.204-69.736-252.94 0-33.782 33.782-52.386 78.697-52.386 126.471 0 98.848 79.993 178.856 178.856 178.856 42.4 0 82.54-14.665 114.651-41.577l37.814 37.814c-12.759 22.668-9.518 51.98 9.756 71.254l62.458 62.458c23.192 23.193 60.931 23.194 84.124 0 23.194-23.194 23.194-60.933.001-84.126zm-412.647-120.837c-57.39-57.389-57.4-150.287 0-207.685 57.389-57.39 150.287-57.399 207.685 0 57.39 57.389 57.399 150.287 0 207.685-57.389 57.391-150.286 57.4-207.685 0zm390.019 182.334c-10.716 10.715-28.153 10.717-38.87 0l-62.458-62.458c-17.377-17.377-4.84-46.908 19.435-46.908 7.039 0 14.077 2.679 19.435 8.037l62.458 62.458c10.717 10.718 10.717 28.155 0 38.871z' fill='%232e58ff'/%3E%3C/svg%3E");
-			background-position: 9px 7px;
-			background-repeat: no-repeat;
-			width: 100%;
-			font-size: 16px;
-			padding: 12px 20px 12px 47px;
-			border: 1px solid #ddd;
-			margin-bottom: 10px;
-			box-sizing: border-box;
-		}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deshboard</title>
+	
+    <link rel="stylesheet" href="./assets/prism.css">
+	<link rel="stylesheet" href="./assets/main.css">
+    <script src="./assets/prism.js"></script>
+    <style>
+        #KriShInput {
+            background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' enable-background='new 0 0 505.054 505.054' height='30' viewBox='0 0 505.054 505.054' width='30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m305.326 52.343c-69.735-69.735-183.204-69.736-252.94 0-33.782 33.782-52.386 78.697-52.386 126.471 0 98.848 79.993 178.856 178.856 178.856 47.774 0 92.688-18.604 126.47-52.386 69.736-69.736 69.736-183.204 0-252.941z' fill='%23a2d0f9'/%3E%3Cpath d='m487.66 403.493-62.458-62.459c-23.193-23.192-60.932-23.192-84.125 0-23.193 23.193-23.193 60.932 0 84.125l62.458 62.458c23.192 23.193 60.931 23.194 84.124 0 23.194-23.192 23.194-60.931.001-84.124z' fill='%2380b9ed'/%3E%3Cpath d='m425.201 341.034c-23.193-23.192-60.932-23.192-84.125 0-23.193 23.193-23.193 60.932 0 84.125l38.74 38.739c13.876-3.454 27.134-13.494 38.395-33.485 12.747-22.628 24.576-43.214 34.91-61.459z' fill='%238bc4ff'/%3E%3Cpath d='m74.115 323.826c69.007 50.066 167.45 45.22 231.211-18.542 47.969-47.969 62.941-116.631 44.917-177.518-28.488 20.775-59.853 52.575-89.918 101.272-51.046 82.68-128.437 97.541-186.21 94.788z' fill='%238bc4ff'/%3E%3Cpath d='m52.385 52.343c-29.536 29.537-47.468 67.584-51.509 108.612 46.143-11.394 93.818-17.382 133.27-9.663 58.117 11.371 136.897-22.033 200.962-59.551-57.599-103.448-198.847-123.273-282.723-39.398z' fill='%23b4dcf9'/%3E%3Cpath d='m487.66 403.493-62.458-62.459c-19.274-19.273-48.584-22.514-71.253-9.755l-37.821-37.821c58.713-70.197 55.121-175.192-10.802-241.115-69.735-69.735-183.204-69.736-252.94 0-33.782 33.782-52.386 78.697-52.386 126.471 0 98.848 79.993 178.856 178.856 178.856 42.4 0 82.54-14.665 114.651-41.577l37.814 37.814c-12.759 22.668-9.518 51.98 9.756 71.254l62.458 62.458c23.192 23.193 60.931 23.194 84.124 0 23.194-23.194 23.194-60.933.001-84.126zm-412.647-120.837c-57.39-57.389-57.4-150.287 0-207.685 57.389-57.39 150.287-57.399 207.685 0 57.39 57.389 57.399 150.287 0 207.685-57.389 57.391-150.286 57.4-207.685 0zm390.019 182.334c-10.716 10.715-28.153 10.717-38.87 0l-62.458-62.458c-17.377-17.377-4.84-46.908 19.435-46.908 7.039 0 14.077 2.679 19.435 8.037l62.458 62.458c10.717 10.718 10.717 28.155 0 38.871z' fill='%232e58ff'/%3E%3C/svg%3E");
+            background-position: 9px 7px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 47px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
 
-		#KriSh {
-			list-style-type: none;
-			padding: 0;
-			margin: 0;
-		}
+        #KriSh {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
 
-		#KriSh li {
-			color: #000000;
-			text-decoration: none;
-			border: 1px ridge #dddddd;
-			background-color: #f3f3f3;
-			padding: 0px 10px;
-			margin-bottom: 5px;
-			-webkit-box-shadow: 0 3px 2px 0px #a99;
-			-moz-box-shadow: 0 3px 2px 0px #a99;
-			box-shadow: 0 3px 2px 0px #a99;
-		}
+        #KriSh li {
+            color: #000000;
+            text-decoration: none;
+            border: 1px ridge #dddddd;
+            background-color: #f3f3f3;
+            padding: 5px 10px;
+            margin-bottom: 5px;
+        }
 
-		.is-full {
-			width: 100%;
-		}
-	</style>
+        .is-full {
+            width: 100%;
+        }
+    </style>
 </head>
 
-<body>
-	<h5> <a href="./syllabus.html">View Schedule</a></h5>
-	<h2>GRKIST Jabalpur </h2>
-	<h3>Code Examples</h3>
-	<div class="is-full">
-		<input type="text" id="KriShInput" placeholder="Search for names.." title="Type in a name">
-	</div>
-	<div class="is-full">
-		<ul id="KriSh">
-			<li>
-				<div>
-					<h5> First Program in PHP</h5>
-					<pre>
-				  <code class="language-php">
+<body class="relative bg-white h-screen">
+    <div class="w-full">
+        <div class="bg-gray-100">
+            <div class="bg-pink-600 py-cont"></div>
+            <nav class="absolute top-0 left-0 w-full z-10 bg-pink-600 flex items-center flex-wrap py-4 px-2 md:px-12 shadow">
+                <div class="flex w-auto">
+                    <div class="flex items-center text-white">
+                        <span class="font-semibold text-xl">PHP Class</span>
+                    </div>
+                </div>
+                <div class="relative text-gray-600" style="margin-left:auto;">
+                    <div class="text-white">
+                        <a href="./syllabus.html" class="btn block ">
+                            Schedule
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <div class="flex -mt-cont">
+
+                <!-- This item will grow -->
+                <div class="container bottom-0 max-w-full mx-auto md:px-12 mb-12">
+                    <div class="bg-white rounded-md my-auto py-4">
+                        <div class="px-2 md:px-12 max-w-full">
+                            <div class="is-full">
+                                <input type="text" id="KriShInput" placeholder="Search for names.."
+                                    title="Type in a name">
+                            </div>
+                            <div class="is-full">
+                                <ul id="KriSh">
+                                    <li>
+                                        <div>
+                                            <string> First Program in PHP</strong>
+                                                <pre>
+                                          <code class="language-php">
 &lt;?php 
-	echo "Hello world";
+    echo "Hello world";
 &gt;
-				  </code>
-			  </pre>
-				</div>
-			</li>
-			<li>
+                                          </code>
+                                      </pre>
+                                        </div>
+                                    </li>
+                                    <li>
 
-			</li>
+                                    </li>
 
-			<li>
+                                    <li>
 
-			</li>
-
-
-		</ul>
-	</div>
+                                    </li>
 
 
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-	<script>
-		document.getElementById('KriShInput').addEventListener('input', function () {
-			var input, filter, ul, li, a, i, txtValue;
-			filter = this.value.toUpperCase();
-			ul = document.getElementById("KriSh");
-			li = ul.getElementsByTagName("li");
-			for (i = 0; i < li.length; i++) {
-				a = li[i].getElementsByTagName("div")[0];
-				txtValue = a.textContent || a.innerText;
-				if (txtValue.toUpperCase().indexOf(filter) > -1) {
-					li[i].style.display = "";
-				} else {
-					li[i].style.display = "none";
-				}
-			}
 
-		});
-	</script>
+            <!-- Footer Start -->
+        </div>
+        <footer class="absolute bottom-start w-full py-2 border-t-2 border-gray-300 ">
+            <div class="container mx-auto">
+                <div class="flex flex-wrap items-center md:justify-between justify-center">
+                    <div class="w-full md:w-4/12">
+                        <div class="text-sm text-gray-600 font-semibold py-1 text-center md:text-left">
+                            <a href="http://grkistmca.co.in/"
+                                class="text-gray-600 hover:text-gray-800 text-sm font-semibold py-1">
+                                GRKIST Jabalpur
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-8/12">
+                        <div class="flex flex-wrap list-none md:justify-end justify-center">
+                            <a href="https://fb.com/rajp7jowa"
+                                class="text-gray-700 hover:text-gray-900 text-sm font-semibold block py-1">
+                                Raj Parihar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('KriShInput').addEventListener('input', function () {
+            var input, filter, ul, li, a, i, txtValue;
+            filter = this.value.toUpperCase();
+            ul = document.getElementById("KriSh");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("div")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+
+        });
+    </script>
 </body>
 
 </html>
