@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deshboard</title>
-	
+    <title>PHP Examples</title>
+
     <link rel="stylesheet" href="./assets/prism.css">
-	<link rel="stylesheet" href="./assets/main.css">
+    <link rel="stylesheet" href="./assets/main.css">
     <script src="./assets/prism.js"></script>
     <style>
         #KriShInput {
@@ -28,7 +28,7 @@
             margin: 0;
         }
 
-        #KriSh li {
+        #KriSh .ksbox {
             color: #000000;
             text-decoration: none;
             border: 1px ridge #dddddd;
@@ -40,6 +40,12 @@
         .is-full {
             width: 100%;
         }
+
+        h4 {
+            color: #db2777;
+            margin-bottom: 5px;
+            margin-top: 5px
+        }
     </style>
 </head>
 
@@ -47,10 +53,11 @@
     <div class="w-full">
         <div class="bg-gray-100">
             <div class="bg-pink-600 py-cont"></div>
-            <nav class="absolute top-0 left-0 w-full z-10 bg-pink-600 flex items-center flex-wrap py-4 px-2 md:px-12 shadow">
+            <nav
+                class="absolute top-0 left-0 w-full z-10 bg-pink-600 flex items-center flex-wrap py-4 px-2 md:px-12 shadow">
                 <div class="flex w-auto">
                     <div class="flex items-center text-white">
-                        <span class="font-semibold text-xl">PHP Class</span>
+                        <span class="font-semibold text-xl">PHP Examples</span>
                     </div>
                 </div>
                 <div class="relative text-gray-600" style="margin-left:auto;">
@@ -72,29 +79,247 @@
                                     title="Type in a name">
                             </div>
                             <div class="is-full">
-                                <ul id="KriSh">
-                                    <li>
-                                        <div>
-                                            <string> First Program in PHP</strong>
-                                                <pre>
-                                          <code class="language-php">
+<ul id="KriSh">
+<li class="ksbox">
+<div>
+    <h4> PHP Install Tools</h4>
+    <ul>
+        <li>
+            » <b>XAMPP</b>, WampServer and BitNami will setup PHP applications
+            for
+            use with Apache on Windows.
+            <a
+                href="https://www.apachefriends.org/index.html">https://www.apachefriends.org/index.html</a>
+        </li>
+    </ul>
+
+</div>
+</li>
+<li class="ksbox">
+<div>
+    <h4> First Program in PHP</h4>
+    <pre><code class="language-php">
 &lt;?php 
     echo "Hello world";
 &gt;
-                                          </code>
-                                      </pre>
-                                        </div>
-                                    </li>
-                                    <li>
+    </code></pre>
+</div>
+</li>
 
-                                    </li>
+<li class="ksbox">
+<div>
+    <h4> Comments</h4>
+    <pre><code class="language-php">
+&lt;?php
+    echo 'This is a test'; // This is a one-line c++ style comment
+    /* This is a multi line comment
+        yet another line of comment */
+    echo 'This is yet another test';
+    echo 'One Final Test'; # This is a one-line shell-style comment
+?&gt;
+    </code></pre>
+</div>
+</li>
 
-                                    <li>
+<li class="ksbox">
+<div>
+    <h4> Type</h4>
+    <p>
+         Four scalar types: (1)bool,&nbsp;&nbsp;&nbsp; (2)int,&nbsp;&nbsp;&nbsp; (3)float,&nbsp;&nbsp;&nbsp; (4)string
+    </p>
+    <pre><code class="language-php">
+&lt;?php
+    $a_bool = TRUE;   // a boolean
+    $a_str  = "foo";  // a string
+    $a_str2 = 'foo';  // a string
+    $an_int = 12;     // an integer
+    $b_floating = 1.1354 //a float
 
-                                    </li>
+    echo gettype($a_bool); // prints out:  boolean
+    echo gettype($a_str);  // prints out:  string
 
 
-                                </ul>
+    // If this is an integer, then print it out
+    if (is_int($an_int)) {
+        echo 'Yes $an_int is integer';
+    }
+
+    // If $a_bool is a string, print it out
+    if (is_string($a_bool)) {
+        echo "String: $a_bool";
+    }
+
+?&gt;
+    </code></pre>
+
+    <p>
+        compound types: (1)array,&nbsp;&nbsp;&nbsp; (2)object,&nbsp;&nbsp;&nbsp;etc.
+    </p>
+    <pre><code class="language-php">
+&lt;?php
+/*   Array */
+    $array = array(
+        "foo" => "bar",
+        "bar" => "foo",
+    );
+    var_dump($array);
+    
+    // Using the short array syntax
+    $array1 = [
+        "foo" => "bar",
+        "bar" => "foo",
+    ];
+    var_dump($array1);
+    
+    $array = array("foo", "bar", "hello", "world");
+    var_dump($array);
+    
+    $arr = array('fruit' => 'apple', 'veggie' => 'carrot');
+    
+    // Correct
+    print $arr['fruit'];  // apple
+    print $arr['veggie']; // carrot
+
+/*objects*/
+
+    class foo
+    {
+        function do_foo()
+        {
+            echo "Doing foo."; 
+        }
+    }
+
+    $bar = new foo; //object
+    $bar->do_foo();
+
+
+
+        
+?&gt;
+    </code></pre>
+
+    <p>
+        special types: (1)NULL,&nbsp;&nbsp;&nbsp;etc.
+    </p>
+    <pre><code class="language-php">
+&lt;?php
+    //Declare NULL
+    $var = NULL;
+    if(is_null($var)){
+        echo '$var is NULL';
+    }     
+?&gt;
+    </code></pre>
+
+
+    
+</div>
+</li>
+
+
+<li class="ksbox">
+<div>
+    <h4>Variables </h4>
+    <pre><code class="language-php">
+&lt;?php
+    $var = 'Bob';
+    $Var = 'Joe';
+    echo "$var, $Var";      // outputs "Bob, Joe"
+
+    $4site = 'not yet';     // invalid; starts with a number
+    $_4site = 'not yet';    // valid; starts with an underscore
+    $täyte = 'mansikka';    // valid; start with String or Character.
+
+/*Variables of Variable*/
+    $foo = new foo();
+    $bar = 'bar';
+    $baz = array('foo', 'bar', 'baz', 'quux');
+    echo $foo->$bar . "\n";
+    echo $foo->{$baz[1]} . "\n";
+
+    $start = 'b';
+    $end   = 'ar';
+    echo $foo->{$start . $end} . "\n";
+
+    $arr = 'arr';
+    echo $foo->{$arr[1]} . "\n";
+?&gt;
+    </code></pre>
+</div>
+</li>
+
+<li class="ksbox">
+<div>
+    <h4> Variable Scope</h4>
+    <pre><code class="language-php">
+&lt;?php
+
+$a_glbl = "globalVariable<br>";
+
+function funFoo()
+{
+    global $a_glbl; //redefined to global Variable
+    echo $a_glbl;   //use global Variable 
+    $a_glbl ="ChangeGlobal<br>";
+
+    $b_lcl ="localVariable<br>"; //defined local Variable
+    echo $b_lcl; // use local Variable
+}
+
+
+echo $a_glbl; //before call funFoo print globalVariable
+funFoo();
+
+//after call funFoo print
+echo $a_glbl; //ChangeGlobal because funFoo change the value of variable
+?&gt;
+    </code></pre>
+</div>
+</li>
+
+
+<li class="ksbox">
+<div>
+    <h4> Constants</h4>
+    <pre><code class="language-php">
+&lt;?php
+    // Valid constant names
+    define("FOO",     "something");
+    define("FOO2",    "something else");
+    define("FOO_BAR", "something more");
+
+    // Invalid constant names
+    define("2FOO",    "something");
+    
+    // Simple scalar value
+    const CONSTANT = 'Hello World';
+    echo CONSTANT;
+
+    const ANIMALS = array('dog', 'cat', 'bird');
+    echo ANIMALS[1]; // outputs "cat"
+
+?&gt;
+    </code></pre>
+</div>
+</li>
+
+<!-- 
+<li class="ksbox">
+<div>
+    <h4> </h4>
+    <pre><code class="language-php">
+&lt;?php
+        #
+?&gt;
+    </code></pre>
+</div>
+</li>
+
+-->
+
+
+</ul>
                             </div>
                         </div>
                     </div>
@@ -133,7 +358,7 @@
             var input, filter, ul, li, a, i, txtValue;
             filter = this.value.toUpperCase();
             ul = document.getElementById("KriSh");
-            li = ul.getElementsByTagName("li");
+            li = ul.getElementsByClassName("ksbox");
             for (i = 0; i < li.length; i++) {
                 a = li[i].getElementsByTagName("div")[0];
                 txtValue = a.textContent || a.innerText;
