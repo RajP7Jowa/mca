@@ -28,23 +28,19 @@
             margin: 0;
         }
 
-        #KriSh .ksbox {
+        #KriSh .ksbox{
             color: #000000;
             text-decoration: none;
-            border: 1px ridge #dddddd;
-            background-color: #f3f3f3;
             padding: 5px 10px;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
 
         .is-full {
             width: 100%;
         }
-
-        h4 {
-            color: #db2777;
+        .text-gray-title, p {
             margin-bottom: 5px;
-            margin-top: 5px
+            margin-top: 5px;
         }
     </style>
 </head>
@@ -60,7 +56,7 @@
                         <span class="font-semibold text-xl">PHP Examples</span>
                     </div>
                 </div>
-                <div class="relative text-gray-600" style="margin-left:auto;">
+                <div class="relative text-gray-title" style="margin-left:auto;">
                     <div class="text-white">
                         <a href="./syllabus.html" class="btn block ">
                             Schedule
@@ -80,9 +76,9 @@
                             </div>
                             <div class="is-full">
 <ul id="KriSh">
-<li class="ksbox">
+<li class="ksbox bg-gray-100 shadow hover:shadow-md">
 <div>
-    <h4> PHP Install Tools</h4>
+    <h4 class="text-gray-title"> PHP Install Tools</h4>
     <ul>
         <li>
             » <b>XAMPP</b>, WampServer and BitNami will setup PHP applications
@@ -95,40 +91,20 @@
 
 </div>
 </li>
-<li class="ksbox">
-<div>
-    <h4> First Program in PHP</h4>
-    <pre><code class="language-php">
-&lt;?php 
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> First Program in PHP</h4><pre><code class="language-php">&lt;?php
     echo "Hello world";
-&gt;
-    </code></pre>
-</div>
-</li>
+?&gt; </code></pre></div></li>
 
-<li class="ksbox">
-<div>
-    <h4> Comments</h4>
-    <pre><code class="language-php">
-&lt;?php
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> Comments</h4><pre><code class="language-php">&lt;?php
     echo 'This is a test'; // This is a one-line c++ style comment
     /* This is a multi line comment
         yet another line of comment */
     echo 'This is yet another test';
     echo 'One Final Test'; # This is a one-line shell-style comment
-?&gt;
-    </code></pre>
-</div>
-</li>
+?&gt;</code></pre></div></li>
 
-<li class="ksbox">
-<div>
-    <h4> Type</h4>
-    <p>
-         Four scalar types: (1)bool,&nbsp;&nbsp;&nbsp; (2)int,&nbsp;&nbsp;&nbsp; (3)float,&nbsp;&nbsp;&nbsp; (4)string
-    </p>
-    <pre><code class="language-php">
-&lt;?php
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> Type</h4>
+<p><b>Four scalar types:</b> (1)bool,&nbsp;&nbsp;&nbsp; (2)int,&nbsp;&nbsp;&nbsp; (3)float,&nbsp;&nbsp;&nbsp; (4)string</p><pre><code class="language-php">&lt;?php
     $a_bool = TRUE;   // a boolean
     $a_str  = "foo";  // a string
     $a_str2 = 'foo';  // a string
@@ -137,7 +113,6 @@
 
     echo gettype($a_bool); // prints out:  boolean
     echo gettype($a_str);  // prints out:  string
-
 
     // If this is an integer, then print it out
     if (is_int($an_int)) {
@@ -148,15 +123,9 @@
     if (is_string($a_bool)) {
         echo "String: $a_bool";
     }
+?&gt;</code></pre>
 
-?&gt;
-    </code></pre>
-
-    <p>
-        compound types: (1)array,&nbsp;&nbsp;&nbsp; (2)object,&nbsp;&nbsp;&nbsp;etc.
-    </p>
-    <pre><code class="language-php">
-&lt;?php
+<p><b>compound types:</b> (1)array,&nbsp;&nbsp;&nbsp; (2)object,&nbsp;&nbsp;&nbsp;etc.</p><pre><code class="language-php">&lt;?php
 /*   Array */
     $array = array(
         "foo" => "bar",
@@ -181,7 +150,6 @@
     print $arr['veggie']; // carrot
 
 /*objects*/
-
     class foo
     {
         function do_foo()
@@ -189,40 +157,23 @@
             echo "Doing foo."; 
         }
     }
-
     $bar = new foo; //object
     $bar->do_foo();
-
-
-
         
-?&gt;
-    </code></pre>
+?&gt;</code></pre>
 
-    <p>
-        special types: (1)NULL,&nbsp;&nbsp;&nbsp;etc.
-    </p>
-    <pre><code class="language-php">
-&lt;?php
+<p><b> special types:</b> (1)NULL,&nbsp;&nbsp;&nbsp;etc.</p><pre><code class="language-php">&lt;?php
     //Declare NULL
     $var = NULL;
     if(is_null($var)){
         echo '$var is NULL';
     }     
-?&gt;
-    </code></pre>
-
-
-    
+?&gt;</code></pre>
 </div>
 </li>
 
 
-<li class="ksbox">
-<div>
-    <h4>Variables </h4>
-    <pre><code class="language-php">
-&lt;?php
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title">Variables </h4><pre><code class="language-php">&lt;?php
     $var = 'Bob';
     $Var = 'Joe';
     echo "$var, $Var";      // outputs "Bob, Joe"
@@ -244,46 +195,30 @@
 
     $arr = 'arr';
     echo $foo->{$arr[1]} . "\n";
-?&gt;
-    </code></pre>
-</div>
-</li>
+?&gt;</code></pre></div></li>
 
-<li class="ksbox">
-<div>
-    <h4> Variable Scope</h4>
-    <pre><code class="language-php">
-&lt;?php
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> Variable Scope</h4><pre><code class="language-php">&lt;?php
+    $a_glbl = "globalVariable<br>";
 
-$a_glbl = "globalVariable<br>";
+    function funFoo()
+    {
+        global $a_glbl; //redefined to global Variable
+        echo $a_glbl;   //use global Variable 
+        $a_glbl ="ChangeGlobal<br>";
 
-function funFoo()
-{
-    global $a_glbl; //redefined to global Variable
-    echo $a_glbl;   //use global Variable 
-    $a_glbl ="ChangeGlobal<br>";
+        $b_lcl ="localVariable<br>"; //defined local Variable
+        echo $b_lcl; // use local Variable
+    }
 
-    $b_lcl ="localVariable<br>"; //defined local Variable
-    echo $b_lcl; // use local Variable
-}
+    echo $a_glbl; //before call funFoo print globalVariable
+    funFoo();
 
-
-echo $a_glbl; //before call funFoo print globalVariable
-funFoo();
-
-//after call funFoo print
-echo $a_glbl; //ChangeGlobal because funFoo change the value of variable
-?&gt;
-    </code></pre>
-</div>
-</li>
+    //after call funFoo print
+    echo $a_glbl; //ChangeGlobal because funFoo change the value of variable
+?&gt;</code></pre></div></li>
 
 
-<li class="ksbox">
-<div>
-    <h4> Constants</h4>
-    <pre><code class="language-php">
-&lt;?php
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> Constants</h4><pre><code class="language-php">&lt;?php
     // Valid constant names
     define("FOO",     "something");
     define("FOO2",    "something else");
@@ -298,24 +233,397 @@ echo $a_glbl; //ChangeGlobal because funFoo change the value of variable
 
     const ANIMALS = array('dog', 'cat', 'bird');
     echo ANIMALS[1]; // outputs "cat"
+?&gt;</code></pre></div></li>
 
-?&gt;
-    </code></pre>
-</div>
-</li>
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> Comparison Operator</h4>
+<pre><code class="language-php">&lt;?php
+    
+    // Integers
+    echo 1 <=> 1; // 0
+    echo 1 <=> 2; // -1
+    echo 2 <=> 1; // 1
+    
+    // Floats
+    echo 1.5 <=> 1.5; // 0
+    echo 1.5 <=> 2.5; // -1
+    echo 2.5 <=> 1.5; // 1
+    
+    // Strings
+    echo "a" <=> "a"; // 0
+    echo "a" <=> "b"; // -1
+    echo "b" <=> "a"; // 1
+    
+    echo "a" <=> "aa"; // -1
+    echo "zz" <=> "aa"; // 1
+    
+    // Arrays
+    echo [] <=> []; // 0
+    echo [1, 2, 3] <=> [1, 2, 3]; // 0
+    echo [1, 2, 3] <=> []; // 1
+    echo [1, 2, 3] <=> [1, 2, 1]; // 1
+    echo [1, 2, 3] <=> [1, 2, 4]; // -1
+    
+    // Objects
+    $a = (object) ["a" => "b"]; 
+    $b = (object) ["a" => "b"]; 
+    echo $a <=> $b; // 0
+    
+    $a = (object) ["a" => "b"]; 
+    $b = (object) ["a" => "c"]; 
+    echo $a <=> $b; // -1
+    
+    $a = (object) ["a" => "c"]; 
+    $b = (object) ["a" => "b"]; 
+    echo $a <=> $b; // 1
+    
+    // not only values are compared; keys must match
+    $a = (object) ["a" => "b"]; 
+    $b = (object) ["b" => "b"]; 
+    echo $a <=> $b; // 1
+
+?&gt;</code></pre></div></li>
+
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> Error Control Operators (@)</h4>
+<pre><code class="language-php">&lt;?php
+    $my_file = @file ('non_existent_file') or die ("Failed opening file: error was '" . error_get_last()['message'] . "'");
+?&gt;</code></pre></div></li>
+
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> Execution Operator (`...`)</h4>
+<pre><code class="language-php">&lt;?php
+    $output = `ls -al`;
+    echo "&lt;pre&gt; $output &lt;/pre&gt;";
+?&gt;</code></pre></div></li>
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title">Increment/Decrements Operator </h4>
+<pre><code class="language-php">&lt;?php
+    echo "&lt;h3&gt;Postincrement&lt;/h3&gt;";
+    $a = 5;
+    echo "Should be 5: " . $a++ . "&lt;br /&gt;\n";
+    echo "Should be 6: " . $a . "&lt;br /&gt;\n";
+
+    echo "&lt;h3&gt;Preincrement&lt;/h3&gt;";
+    $a = 5;
+    echo "Should be 6: " . ++$a . "&lt;br /&gt;\n";
+    echo "Should be 6: " . $a . "&lt;br /&gt;\n";
+
+    echo "&lt;h3&gt;Postdecrement&lt;/h3&gt;";
+    $a = 5;
+    echo "Should be 5: " . $a-- . "&lt;br /&gt;\n";
+    echo "Should be 4: " . $a . "&lt;br /&gt;\n";
+
+    echo "&lt;h3&gt;Predecrement&lt;/h3&gt;";
+    $a = 5;
+    echo "Should be 4: " . --$a . "&lt;br /&gt;\n";
+    echo "Should be 4: " . $a . "&lt;br /&gt;\n";
+?&gt;</code></pre></div></li>
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> String Operator</h4>
+<pre><code class="language-php">&lt;?php
+    $a = "Hello ";
+    $b = $a . "World!"; // now $b contains "Hello World!"
+
+    $a = "Hello ";
+    $a .= "World!";     // now $a contains "Hello World!"
+?&gt;</code></pre></div></li>
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> Array Operators</h4>
+<pre><code class="language-php">&lt;?php
+    $a = array("a" => "apple", "b" => "banana");
+    $b = array("a" => "pear", "b" => "strawberry", "c" => "cherry");
+
+    $c = $a + $b; // Union of $a and $b
+    echo "Union of \$a and \$b: \n";
+    var_dump($c);
+
+    $c = $b + $a; // Union of $b and $a
+    echo "Union of \$b and \$a: \n";
+    var_dump($c);
+
+    $a += $b; // Union of $a += $b is $a and $b
+    echo "Union of \$a += \$b: \n";
+    var_dump($a);
+
+    $a = array("apple", "banana");
+    $b = array( 1 => "banana", 0 => "apple");
+
+    var_dump($a == $b); // bool(true)
+    var_dump($a === $b); // bool(false)
+?&gt;</code></pre></div></li>
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> Type Operator</h4>
+<pre><code class="language-php">&lt;?php
+    class MyClass
+    {
+    }
+
+    class NotMyClass
+    {
+    }
+    $a = new MyClass;
+
+    var_dump($a instanceof MyClass); //true
+    var_dump($a instanceof NotMyClass); //false
+
+/*with inherit class*/
+    class ParentClass
+    {
+    }
+
+    class MyClass extends ParentClass
+    {
+    }
+
+    $a = new MyClass;
+
+    var_dump($a instanceof MyClass); //true
+    var_dump($a instanceof ParentClass); //true
+
+/*with interface*/    
+    interface MyInterface
+    {
+    }
+
+    class MyClass implements MyInterface
+    {
+    }
+
+    $a = new MyClass;
+
+    var_dump($a instanceof MyClass); //true
+    var_dump($a instanceof MyInterface); //true
+
+/*with other Operator*/   
+    interface MyInterface
+    {
+    }
+
+    class MyClass implements MyInterface
+    {
+    }
+
+    $a = new MyClass;
+    $b = new MyClass;
+    $c = 'MyClass';
+    $d = 'NotMyClass';
+
+    var_dump($a instanceof $b); // $b is an object of class MyClass
+    var_dump($a instanceof $c); // $c is a string 'MyClass'
+    var_dump($a instanceof $d); // $d is a string 'NotMyClass'
+?&gt;</code></pre></div></li>
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title">if elseif</h4>
+<pre><code class="language-php">&lt;?php
+/*simple syntax*/
+    if ($a > $b) {
+        echo "a is bigger than b";
+    } elseif ($a == $b) {
+        echo "a is equal to b";
+    } else {
+        echo "a is smaller than b";
+    }  
+
+/*Alternative syntax*/
+    if ($a == 5):
+        echo "a equals 5";
+        echo "...";
+    elseif ($a == 6):
+        echo "a equals 6";
+        echo "!!!";
+    else:
+        echo "a is neither 5 nor 6";
+    endif;
+?&gt;</code></pre></div></li>
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> While</h4>
+<pre><code class="language-php">&lt;?php
+    /* simple syntax*/
+    $i = 1;
+    while ($i <= 10) {
+        echo $i++;  /* the printed value would be
+                    $i before the increment
+                    (post-increment) */
+    }
+
+    /* Alternative syntax */
+
+    $i = 1;
+    while ($i <= 10):
+        echo $i;
+        $i++;
+    endwhile;
+?&gt;</code></pre></div></li>
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> Do while</h4>
+<pre><code class="language-php">&lt;?php
+    $i = 0;
+    do {
+        echo $i;
+    } while ($i > 0);
+?&gt;</code></pre></div></li>
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> For</h4>
+<pre><code class="language-php">&lt;?php
+    /* example 1 */
+    for ($i = 1; $i <= 10; $i++) {
+        echo $i;
+    }
+
+    /* example 2 */
+    for ($i = 1; ; $i++) {
+        if ($i > 10) {
+            break;
+        }
+        echo $i;
+    }
+
+    /* example 3 */
+    $i = 1;
+    for (; ; ) {
+        if ($i > 10) {
+            break;
+        }
+        echo $i;
+        $i++;
+    }
+
+    /* example 4 */
+    for ($i = 1, $j = 0; $i <= 10; $j += $i, print $i, $i++);
+?&gt;</code></pre></div></li>
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title">Foreach </h4>
+<pre><code class="language-php">&lt;?php
+    $arr = array(1, 2, 3, 4);
+    foreach ($arr as &$value) {
+        $value = $value * 2;
+    }
+    // $arr is now array(2, 4, 6, 8)
+
+    // without an unset($value), $value is still a reference to the last item: $arr[3]
+
+    foreach ($arr as $key => $value) {
+        // $arr[3] will be updated with each value from $arr...
+        echo "{$key} => {$value} ";
+        print_r($arr);
+    }
+?&gt;</code></pre></div></li>
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> Break</h4>
+<pre><code class="language-php">&lt;?php
+    $arr = array('one', 'two', 'three', 'four', 'stop', 'five');
+    foreach ($arr as $val) {
+        if ($val == 'stop') {
+            break;    /* You could also write 'break 1;' here. */
+        }
+        echo "$val<br />\n";
+    }
+    
+?&gt;</code></pre></div></li>
+
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> Continue</h4>
+<pre><code class="language-php">&lt;?php
+    $arr = array(1,2,3,4,5);
+    foreach ($arr as $key ) {
+        if ($key == 3) { // skip even members   
+            continue;
+        }
+        print($key);
+    }
+    //output : 1,2,4,5
+?&gt;</code></pre></div></li>
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> Switch</h4>
+<pre><code class="language-php">&lt;?php
+    $i = 1;
+    switch ($i) {
+        case 1:
+            echo "At 1<br />\n";
+        case 2:
+            echo "At 2<br />\n";
+            break;
+        case 3:
+            echo "At 3<br />\n";
+        case 4:
+            echo "At 4<br />\n";
+            break;
+        default:
+            echo "At default<br />\n";
+            break;
+    }
+?&gt;</code></pre></div></li>
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> return</h4>
+<pre><code class="language-php">&lt;?php
+    function fullName$a, $b){
+        return $a.$b;
+    }
+    $first= "amit";
+    $last = "patel";
+    echo "Full Name:" . fullName($fist, $last);
+
+?&gt;</code></pre></div></li>
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> goto</h4>
+<pre><code class="language-php">&lt;?php
+    goto a;
+    echo 'Foo';
+    
+    a:
+    echo 'Bar';
+?&gt;</code></pre></div></li>
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title">include, require, include_once, require_once </h4>
+<pre><code class="language-php">&lt;?php
+    include 'file.php';
+    require 'file.php';
+    include_once 'file.php';
+    require_once 'file.php';
+?&gt;</code></pre></div></li>
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> </h4>
+<pre><code class="language-php">&lt;?php
+    #
+?&gt;</code></pre></div></li>
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> </h4>
+<pre><code class="language-php">&lt;?php
+    #
+?&gt;</code></pre></div></li>
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> </h4>
+<pre><code class="language-php">&lt;?php
+    #
+?&gt;</code></pre></div></li>
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> </h4>
+<pre><code class="language-php">&lt;?php
+    #
+?&gt;</code></pre></div></li>
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> </h4>
+<pre><code class="language-php">&lt;?php
+    #
+?&gt;</code></pre></div></li>
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> </h4>
+<pre><code class="language-php">&lt;?php
+    #
+?&gt;</code></pre></div></li>
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> </h4>
+<pre><code class="language-php">&lt;?php
+    #
+?&gt;</code></pre></div></li>
+
 
 <!-- 
-<li class="ksbox">
-<div>
-    <h4> </h4>
-    <pre><code class="language-php">
-&lt;?php
-        #
-?&gt;
-    </code></pre>
-</div>
-</li>
-
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> </h4>
+<pre><code class="language-php">&lt;?php
+    #
+?&gt;</code></pre></div></li>
 -->
 
 
@@ -333,9 +641,9 @@ echo $a_glbl; //ChangeGlobal because funFoo change the value of variable
             <div class="container mx-auto">
                 <div class="flex flex-wrap items-center md:justify-between justify-center">
                     <div class="w-full md:w-4/12">
-                        <div class="text-sm text-gray-600 font-semibold py-1 text-center md:text-left">
+                        <div class="text-sm text-gray-title font-semibold py-1 text-center md:text-left">
                             <a href="http://grkistmca.co.in/"
-                                class="text-gray-600 hover:text-gray-800 text-sm font-semibold py-1">
+                                class="text-gray-title hover:text-gray-title text-sm font-semibold py-1">
                                 GRKIST Jabalpur
                             </a>
                         </div>
@@ -343,7 +651,7 @@ echo $a_glbl; //ChangeGlobal because funFoo change the value of variable
                     <div class="w-full md:w-8/12">
                         <div class="flex flex-wrap list-none md:justify-end justify-center">
                             <a href="https://fb.com/rajp7jowa"
-                                class="text-gray-700 hover:text-gray-900 text-sm font-semibold block py-1">
+                                class="text-gray-title hover:text-gray-title text-sm font-semibold block py-1">
                                 Raj Parihar
                             </a>
                         </div>
@@ -358,7 +666,7 @@ echo $a_glbl; //ChangeGlobal because funFoo change the value of variable
             var input, filter, ul, li, a, i, txtValue;
             filter = this.value.toUpperCase();
             ul = document.getElementById("KriSh");
-            li = ul.getElementsByClassName("ksbox");
+            li = ul.getElementsByClassName("ksbox bg-gray-100 shadow hover:shadow-md");
             for (i = 0; i < li.length; i++) {
                 a = li[i].getElementsByTagName("div")[0];
                 txtValue = a.textContent || a.innerText;
