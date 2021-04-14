@@ -38,9 +38,8 @@
         .is-full {
             width: 100%;
         }
-        .text-gray-title, p {
+        h4 {
             margin-bottom: 5px;
-            margin-top: 5px;
         }
     </style>
 </head>
@@ -583,49 +582,194 @@
     require_once 'file.php';
 ?&gt;</code></pre></div></li>
 
-<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> </h4>
-<pre><code class="language-php">&lt;?php
-    #
-?&gt;</code></pre></div></li>
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> Basic HTML Document</h4>
+    <p> Below mentioned are the basic HTML tags which divides the whole document into various parts like head, body etc.</p>
+    <p> Every HTML document begins with a HTML document tag. Although this is not mandatory but it is a good convention to start the document with this below mentioned tag:</p> 
+<pre><code class="language-html"> &lt;!DOCTYPE html&gt;</code></pre>
+    <ul style="list-style-type: square">
+        <li>
+            <b><code class="language-html"> &lt;html&gt; </code> : </b> Every HTML code must be enclosed between basic HTML tags. It begins with <code class="language-html"> &lt;html&gt; </code> and ends with <code class="language-html"> &lt;/html&gt; </code> tag.
+        </li>
+        <li>
+            <b><code class="language-html"> &lt;head&gt; </code> : </b> The head tag comes next which contains all the header information of the web page or document like the title of the page and other miscellaneous information. These information are enclosed within head tag which opens with <code class="language-html"> &lt;head&gt; </code> and ends with <code class="language-html"> &lt;/head&gt; </code>. The contents will of this tag will be explained in the later sections of course.
+        </li>
+        <li>
+            <b><code class="language-html"> &lt;title&gt; </code> :</b> We can mention the title of a web page using the <code class="language-html"> &lt;title&gt; </code> tag. This is a header information and hence mentioned within the header tags. The tag begins with <code class="language-html"> &lt;title&gt; </code> and ends with <code class="language-html"> &lt;/title&gt; </code>
+        </li>
+        <li>
+            <b><code class="language-html"> &lt;body&gt; </code> :</b> Next step is the most important of all the tags we have learned so far. The body tag contains the actual body of the page which will be visible to all the users. This opens with <code class="language-html"> &lt;body&gt; </code> and ends with <code class="language-html"> &lt;/body&gt; </code>. Every content enclosed within this tag will be shown on the web page be it writings or images or audios or videos or even links. We will see later in the section how using various tags we may insert mentioned contents into our web pages.
+        </li>
+    </ul>
+<pre><code class="language-html">&lt;html&gt;
+    &lt;head&gt;
+        &lt;!-- Information about the page --&gt;
+        &lt;!--This is the comment tag--&gt;
+        &lt;title>GeeksforGeeks&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!--Contents of the webpage--&gt;
+    &lt;/body&gt;
+&lt;/html&gt; </code></pre>
+<p>This code won’t display anything. It just shows the basic pattern of how to write the HTML code and will name the title of the page as GeeksforGeeks. <code class="language-html"> &lt;!-- comment here --&gt;</code> is the comment tag in HTML and it doesn’t reads the line present inside this tag.</p>
+<h4 class="text-gray-title">Headings </h4>
+<p>The <code class="language-html"> &lt;h1&gt;</code> to <code class="language-html">&lt;h6&gt;</code> tags are used to define HTML headings.
+<br> Every HTML document begins with a HTML document tag. Although this is not mandatory but it is a good convention to start the document with this below mentioned tag: 
+<pre><code class="language-html">&lt;h1 style="background-color:DodgerBlue;"&gt;Hello World&lt;/h1&gt;
+&lt;h2 style="color:Tomato;"&gt;Hello World&lt;/h2&gt; 
+</code></pre>
+</p>
+<h4 class="text-gray-title">Paragraph </h4>
+<p>The <code class="language-html">&lt;p&gt;</code> tag defines a paragraph.
+    Browsers automatically add a single blank line before and after each <code class="language-html">&lt;p&gt;</code> element.
+<pre><code class="language-html">&lt;p&lt; This is some text in a paragraph.&lt;/p&gt; </code></pre>
+</p>
+<h4 class="text-gray-title">Single Line Break </h4>
+<p>The <code class="language-html">&lt;br&gt;</code> tag inserts a single line break.
+<br>The <code class="language-html">&lt;br&gt;</code> tag is useful for writing addresses or poems.
+<br>The <code class="language-html">&lt;br&gt;</code> tag is an empty tag which means that it has no end tag.
+<pre><code class="language-html">To force&lt;br&gt; line breaks&lt;br&gt; in a text,&lt;br&gt; use the br&lt;br&gt; element.&lt;</code></pre>
+</p>
 
-<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> </h4>
-<pre><code class="language-php">&lt;?php
-    #
-?&gt;</code></pre></div></li>
+<h4 class="text-gray-title">horizontal rule </h4>
+<p>The <code class="language-html">&lt;hr&gt;</code> element is most often displayed as a horizontal rule that is used to separate content (or define a change) in an HTML page.
+<pre><code class="language-html">&lt;h1&gt;The Main Languages of the Web&lt;/h1&gt;        
+&lt;hr&gt;
+</code></pre>
+</p>
 
-<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> </h4>
-<pre><code class="language-php">&lt;?php
-    #
-?&gt;</code></pre></div></li>
+<h4 class="text-gray-title">Comments</h4>
+<p>The comment tag is used to insert comments in the source code. Comments are not displayed in the browsers.
+<pre><code class="language-html">&lt;!--This is a comment. Comments are not displayed in the browser --&gt;        
+</code></pre>
+</p>
 
-<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> </h4>
-<pre><code class="language-php">&lt;?php
-    #
-?&gt;</code></pre></div></li>
-
-<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> </h4>
-<pre><code class="language-php">&lt;?php
-    #
-?&gt;</code></pre></div></li>
-
-<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> </h4>
-<pre><code class="language-php">&lt;?php
-    #
-?&gt;</code></pre></div></li>
-
-<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> </h4>
-<pre><code class="language-php">&lt;?php
-    #
-?&gt;</code></pre></div></li>
+</div></li>
 
 
-<!-- 
-<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> </h4>
-<pre><code class="language-php">&lt;?php
-    #
-?&gt;</code></pre></div></li>
--->
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title">HTML Formatting tags</h4>
+<table class="w3-table-all notranslate">
+<tbody>
+    <tr>
+        <th style="width:20%">Tag</th>
+        <th style="vertical-align: middle">Description</th>
+    </tr>
+    <tr>
+        <td><pre><code class="language-html">&lt;b&gt;</code> </pre></td>
+        <td style="vertical-align: middle">Defines bold text</td>
+    </tr>
+    <tr>
+        <td><pre><code class="language-html">&lt;blockquote&gt;</code></pre></td>
+        <td style="vertical-align: middle">Defines a section that is quoted from another source</td>
+    </tr>
+    <tr>
+        <td><pre><code class="language-html">&lt;em&gt;</code></pre></td>
+        <td style="vertical-align: middle">Defines emphasized text&nbsp;</td>
+    </tr>
+    <tr>
+        <td><pre><code class="language-html">&lt;i&gt;</code></pre></td>
+        <td style="vertical-align: middle">Defines a part of text in an alternate voice or mood</td>
+    </tr>
+    <tr>
+        <td><pre><code class="language-html">&lt;pre&gt;</code></pre></td>
+        <td style="vertical-align: middle">Defines preformatted text</td>
+    </tr>
+    <tr>
+        <td><pre><code class="language-html">&lt;progress&gt;</code></pre></td>
+        <td style="vertical-align: middle">Represents the progress of a task</td>
+    </tr>
+    <tr>
+        <td><pre><code class="language-html">&lt;q&gt;</code></pre></td>
+        <td style="vertical-align: middle">Defines a short quotation</td>
+    </tr>
+    <tr>
+        <td><pre><code class="language-html">&lt;s&gt;</code></pre></td>
+        <td style="vertical-align: middle">Defines text that is no longer correct</td>
+    </tr>
+    <tr>
+        <td><pre><code class="language-html">&lt;small&gt;</code></pre></td>
+        <td style="vertical-align: middle">Defines smaller text</td>
+    </tr>
+    <tr>
+        <td><pre><code class="language-html">&lt;strong&gt;</code></pre></td>
+        <td style="vertical-align: middle">Defines important text</td>
+    </tr>
+    <tr>
+        <td><pre><code class="language-html">&lt;sub&gt;</code></pre></td>
+        <td style="vertical-align: middle">Defines subscripted text</td>
+    </tr>
+    <tr>
+        <td><pre><code class="language-html">&lt;sup&gt;</code></pre></td>
+        <td style="vertical-align: middle">Defines superscripted text</td>
+    </tr>
+    <tr>
+        <td><pre><code class="language-html">&lt;u&gt;</code></pre></td>
+        <td style="vertical-align: middle">Defines some text that is unarticulated and styled differently from normal text. </td>
+    </tr>
+</tbody>
+</table></div></li>
 
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title">HTML Formatting tags</h4>
+    <table class="w3-table-all notranslate">
+    <tbody>
+        <tr>
+            <th style="width:20%">Tag</th>
+            <th style="vertical-align: middle">Description</th>
+        </tr>
+        <tr>
+            <td><pre><code class="language-html">&lt;b&gt;</code> </pre></td>
+            <td style="vertical-align: middle">Defines bold text</td>
+        </tr>
+        <tr>
+            <td><pre><code class="language-html">&lt;blockquote&gt;</code></pre></td>
+            <td style="vertical-align: middle">Defines a section that is quoted from another source</td>
+        </tr>
+        <tr>
+            <td><pre><code class="language-html">&lt;em&gt;</code></pre></td>
+            <td style="vertical-align: middle">Defines emphasized text&nbsp;</td>
+        </tr>
+        <tr>
+            <td><pre><code class="language-html">&lt;i&gt;</code></pre></td>
+            <td style="vertical-align: middle">Defines a part of text in an alternate voice or mood</td>
+        </tr>
+        <tr>
+            <td><pre><code class="language-html">&lt;pre&gt;</code></pre></td>
+            <td style="vertical-align: middle">Defines preformatted text</td>
+        </tr>
+        <tr>
+            <td><pre><code class="language-html">&lt;progress&gt;</code></pre></td>
+            <td style="vertical-align: middle">Represents the progress of a task</td>
+        </tr>
+        <tr>
+            <td><pre><code class="language-html">&lt;q&gt;</code></pre></td>
+            <td style="vertical-align: middle">Defines a short quotation</td>
+        </tr>
+        <tr>
+            <td><pre><code class="language-html">&lt;s&gt;</code></pre></td>
+            <td style="vertical-align: middle">Defines text that is no longer correct</td>
+        </tr>
+        <tr>
+            <td><pre><code class="language-html">&lt;small&gt;</code></pre></td>
+            <td style="vertical-align: middle">Defines smaller text</td>
+        </tr>
+        <tr>
+            <td><pre><code class="language-html">&lt;strong&gt;</code></pre></td>
+            <td style="vertical-align: middle">Defines important text</td>
+        </tr>
+        <tr>
+            <td><pre><code class="language-html">&lt;sub&gt;</code></pre></td>
+            <td style="vertical-align: middle">Defines subscripted text</td>
+        </tr>
+        <tr>
+            <td><pre><code class="language-html">&lt;sup&gt;</code></pre></td>
+            <td style="vertical-align: middle">Defines superscripted text</td>
+        </tr>
+        <tr>
+            <td><pre><code class="language-html">&lt;u&gt;</code></pre></td>
+            <td style="vertical-align: middle">Defines some text that is unarticulated and styled differently from normal text. </td>
+        </tr>
+    </tbody>
+    </table></div></li>
+    
 
 </ul>
                             </div>
