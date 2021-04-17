@@ -41,6 +41,7 @@
         h4 {
             margin-bottom: 5px;
         }
+        dl dt{font-weight: bold;}
     </style>
 </head>
 
@@ -57,8 +58,8 @@
                 </div>
                 <div class="relative text-gray-title" style="margin-left:auto;">
                     <div class="text-white">
-                        <a href="./syllabus.html" class="btn block ">
-                            Schedule
+                        <a href="./doc.html" class="btn block ">
+                            Download
                         </a>
                     </div>
                 </div>
@@ -78,16 +79,11 @@
 <li class="ksbox bg-gray-100 shadow hover:shadow-md">
 <div>
     <h4 class="text-gray-title"> PHP Install Tools</h4>
-    <ul>
-        <li>
-            » <b>XAMPP</b>, WampServer and BitNami will setup PHP applications
-            for
-            use with Apache on Windows.
-            <a
-                href="https://www.apachefriends.org/index.html">https://www.apachefriends.org/index.html</a>
-        </li>
-    </ul>
-
+    » <b>XAMPP</b>, WampServer and BitNami will setup PHP applications
+    for
+    use with Apache on Windows. <br>
+    <a
+        href="https://www.apachefriends.org/index.html">https://www.apachefriends.org/index.html</a>
 </div>
 </li>
 <li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> First Program in PHP</h4><pre><code class="language-php">&lt;?php
@@ -225,76 +221,8 @@
 
     // Invalid constant names
     define("2FOO",    "something");
-    
-    // Simple scalar value
-    const CONSTANT = 'Hello World';
-    echo CONSTANT;
-
-    const ANIMALS = array('dog', 'cat', 'bird');
-    echo ANIMALS[1]; // outputs "cat"
 ?&gt;</code></pre></div></li>
 
-
-<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> Comparison Operator</h4>
-<pre><code class="language-php">&lt;?php
-    
-    // Integers
-    echo 1 <=> 1; // 0
-    echo 1 <=> 2; // -1
-    echo 2 <=> 1; // 1
-    
-    // Floats
-    echo 1.5 <=> 1.5; // 0
-    echo 1.5 <=> 2.5; // -1
-    echo 2.5 <=> 1.5; // 1
-    
-    // Strings
-    echo "a" <=> "a"; // 0
-    echo "a" <=> "b"; // -1
-    echo "b" <=> "a"; // 1
-    
-    echo "a" <=> "aa"; // -1
-    echo "zz" <=> "aa"; // 1
-    
-    // Arrays
-    echo [] <=> []; // 0
-    echo [1, 2, 3] <=> [1, 2, 3]; // 0
-    echo [1, 2, 3] <=> []; // 1
-    echo [1, 2, 3] <=> [1, 2, 1]; // 1
-    echo [1, 2, 3] <=> [1, 2, 4]; // -1
-    
-    // Objects
-    $a = (object) ["a" => "b"]; 
-    $b = (object) ["a" => "b"]; 
-    echo $a <=> $b; // 0
-    
-    $a = (object) ["a" => "b"]; 
-    $b = (object) ["a" => "c"]; 
-    echo $a <=> $b; // -1
-    
-    $a = (object) ["a" => "c"]; 
-    $b = (object) ["a" => "b"]; 
-    echo $a <=> $b; // 1
-    
-    // not only values are compared; keys must match
-    $a = (object) ["a" => "b"]; 
-    $b = (object) ["b" => "b"]; 
-    echo $a <=> $b; // 1
-
-?&gt;</code></pre></div></li>
-
-
-<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> Error Control Operators (@)</h4>
-<pre><code class="language-php">&lt;?php
-    $my_file = @file ('non_existent_file') or die ("Failed opening file: error was '" . error_get_last()['message'] . "'");
-?&gt;</code></pre></div></li>
-
-
-<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> Execution Operator (`...`)</h4>
-<pre><code class="language-php">&lt;?php
-    $output = `ls -al`;
-    echo "&lt;pre&gt; $output &lt;/pre&gt;";
-?&gt;</code></pre></div></li>
 
 <li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title">Increment/Decrements Operator </h4>
 <pre><code class="language-php">&lt;?php
@@ -326,91 +254,6 @@
 
     $a = "Hello ";
     $a .= "World!";     // now $a contains "Hello World!"
-?&gt;</code></pre></div></li>
-
-<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> Array Operators</h4>
-<pre><code class="language-php">&lt;?php
-    $a = array("a" => "apple", "b" => "banana");
-    $b = array("a" => "pear", "b" => "strawberry", "c" => "cherry");
-
-    $c = $a + $b; // Union of $a and $b
-    echo "Union of \$a and \$b: \n";
-    var_dump($c);
-
-    $c = $b + $a; // Union of $b and $a
-    echo "Union of \$b and \$a: \n";
-    var_dump($c);
-
-    $a += $b; // Union of $a += $b is $a and $b
-    echo "Union of \$a += \$b: \n";
-    var_dump($a);
-
-    $a = array("apple", "banana");
-    $b = array( 1 => "banana", 0 => "apple");
-
-    var_dump($a == $b); // bool(true)
-    var_dump($a === $b); // bool(false)
-?&gt;</code></pre></div></li>
-
-<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> Type Operator</h4>
-<pre><code class="language-php">&lt;?php
-    class MyClass
-    {
-    }
-
-    class NotMyClass
-    {
-    }
-    $a = new MyClass;
-
-    var_dump($a instanceof MyClass); //true
-    var_dump($a instanceof NotMyClass); //false
-
-/*with inherit class*/
-    class ParentClass
-    {
-    }
-
-    class MyClass extends ParentClass
-    {
-    }
-
-    $a = new MyClass;
-
-    var_dump($a instanceof MyClass); //true
-    var_dump($a instanceof ParentClass); //true
-
-/*with interface*/    
-    interface MyInterface
-    {
-    }
-
-    class MyClass implements MyInterface
-    {
-    }
-
-    $a = new MyClass;
-
-    var_dump($a instanceof MyClass); //true
-    var_dump($a instanceof MyInterface); //true
-
-/*with other Operator*/   
-    interface MyInterface
-    {
-    }
-
-    class MyClass implements MyInterface
-    {
-    }
-
-    $a = new MyClass;
-    $b = new MyClass;
-    $c = 'MyClass';
-    $d = 'NotMyClass';
-
-    var_dump($a instanceof $b); // $b is an object of class MyClass
-    var_dump($a instanceof $c); // $c is a string 'MyClass'
-    var_dump($a instanceof $d); // $d is a string 'NotMyClass'
 ?&gt;</code></pre></div></li>
 
 <li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title">if elseif</h4>
@@ -586,7 +429,7 @@
     <p> Below mentioned are the basic HTML tags which divides the whole document into various parts like head, body etc.</p>
     <p> Every HTML document begins with a HTML document tag. Although this is not mandatory but it is a good convention to start the document with this below mentioned tag:</p> 
 <pre><code class="language-html"> &lt;!DOCTYPE html&gt;</code></pre>
-    <ul style="list-style-type: square">
+    <ul>
         <li>
             <b><code class="language-html"> &lt;html&gt; </code> : </b> Every HTML code must be enclosed between basic HTML tags. It begins with <code class="language-html"> &lt;html&gt; </code> and ends with <code class="language-html"> &lt;/html&gt; </code> tag.
         </li>
@@ -708,7 +551,7 @@
 </tbody>
 </table></div></li>
 
-<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title">HTML Formatting tags</h4>
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title">HTML Forms and input</h4>
     <table class="w3-table-all notranslate">
     <tbody>
         <tr>
@@ -716,60 +559,201 @@
             <th style="vertical-align: middle">Description</th>
         </tr>
         <tr>
-            <td><pre><code class="language-html">&lt;b&gt;</code> </pre></td>
-            <td style="vertical-align: middle">Defines bold text</td>
+            <td><pre><code class="language-html">&lt;form&gt;</code> </pre></td>
+            <td style="vertical-align: middle">used to create an html form for user input<br>
+            <u>Attributes:</u>
+                <dl>
+                <dt>action</dt>
+                <dd>Specifies where to send the form-data when a form is submitted.</dd>
+                <dt>method</dt>
+                <dd>Specifies the HTTP method to use when sending form-data</dd>
+                </dl>
+
+                <br>
+            </td>
         </tr>
         <tr>
-            <td><pre><code class="language-html">&lt;blockquote&gt;</code></pre></td>
-            <td style="vertical-align: middle">Defines a section that is quoted from another source</td>
+            <td><pre><code class="language-html">&lt;input&gt;</code></pre></td>
+            <td style="vertical-align: middle">Specifies an input field where the user can enter data.
+                <br>
+                The different input type are as follows:<br>
+                <ul>
+                    <li ><code class="language-html">&lt;input type="button"&gt;</code></li>
+                    <li ><code class="language-html">&lt;input type="checkbox"&gt;</code></li>
+                    <li ><code class="language-html">&lt;input type="color"&gt;</code></li>
+                    <li ><code class="language-html">&lt;input type="date"&gt;</code></li>
+                    <li ><code class="language-html">&lt;input type="datetime-local"&gt;</code></li>
+                    <li ><code class="language-html">&lt;input type="email"&gt;</code></li>
+                    <li ><code class="language-html">&lt;input type="file"&gt;</code></li>
+                    <li ><code class="language-html">&lt;input type="hidden"&gt;</code></li>
+                    <li ><code class="language-html">&lt;input type="image"&gt;</code></li>
+                    <li ><code class="language-html">&lt;input type="month"&gt;</code></li>
+                    <li ><code class="language-html">&lt;input type="number"&gt;</code></li>
+                    <li ><code class="language-html">&lt;input type="password"&gt;</code></li>
+                    <li ><code class="language-html">&lt;input type="radio"&gt;</code></li>
+                    <li ><code class="language-html">&lt;input type="range"&gt;</code></li>
+                    <li ><code class="language-html">&lt;input type="reset"&gt;</code></li>
+                    <li ><code class="language-html">&lt;input type="search"&gt;</code></li>
+                    <li ><code class="language-html">&lt;input type="submit"&gt;</code></li>
+                    <li ><code class="language-html">&lt;input type="tel"&gt;</code></li>
+                    <li ><code class="language-html">&lt;input type="text"&gt;</code> (default value)</li>
+                    <li ><code class="language-html">&lt;input type="time"&gt;</code></li>
+                    <li ><code class="language-html">&lt;input type="url"&gt;</code></li>
+                    <li ><code class="language-html">&lt;input type="week"&gt;</code></li>
+                  </ul>
+            <br>
+            </td>
         </tr>
         <tr>
-            <td><pre><code class="language-html">&lt;em&gt;</code></pre></td>
-            <td style="vertical-align: middle">Defines emphasized text&nbsp;</td>
+            <td><pre><code class="language-html">&lt;textarea&gt;</code></pre></td>
+            <td style="vertical-align: middle"> tag defines a multi-line text input control.&nbsp;<br>
+                <u>Attributes:</u>
+                <dl>
+                <dt>cols="5"</dt>
+                <dd>Specifies the visible width of a text area ie. 5</dd>
+                <dt>rows="2"</dt>
+                <dd>Specifies the visible number og lines in a textarea ie. 2</dd>
+                <dt>warp="hard|soft"
+                </dt>
+                <dd>Specifies how the text in a text area is to be wrapped when submitted in a form </dd>
+                </dl>
+            <br>
+            </td>
         </tr>
         <tr>
-            <td><pre><code class="language-html">&lt;i&gt;</code></pre></td>
-            <td style="vertical-align: middle">Defines a part of text in an alternate voice or mood</td>
+            <td><pre><code class="language-html">&lt;button&gt;</code></pre></td>
+            <td style="vertical-align: middle">Defines a clickable button <br>
+                <u>Attributes:</u>
+                <dl>
+                    <dt>type="button|reset|submit"</dt>
+                    <dd>Specifies the type of button</dd>
+                </dl>
+                <br>
+                </td>
         </tr>
         <tr>
-            <td><pre><code class="language-html">&lt;pre&gt;</code></pre></td>
-            <td style="vertical-align: middle">Defines preformatted text</td>
+            <td><pre><code class="language-html">&lt;select&gt;</code></pre></td>
+            <td style="vertical-align: middle">used to create a drop-down list<br>
+                The <code class="language-html">&lt;option&gt;</code> tags inside the <code class="language-html">&lt;select&gt;</code> element define the available options in the drop-down list.
+            <br>
+            </td>
         </tr>
-        <tr>
-            <td><pre><code class="language-html">&lt;progress&gt;</code></pre></td>
-            <td style="vertical-align: middle">Represents the progress of a task</td>
-        </tr>
-        <tr>
-            <td><pre><code class="language-html">&lt;q&gt;</code></pre></td>
-            <td style="vertical-align: middle">Defines a short quotation</td>
-        </tr>
-        <tr>
-            <td><pre><code class="language-html">&lt;s&gt;</code></pre></td>
-            <td style="vertical-align: middle">Defines text that is no longer correct</td>
-        </tr>
-        <tr>
-            <td><pre><code class="language-html">&lt;small&gt;</code></pre></td>
-            <td style="vertical-align: middle">Defines smaller text</td>
-        </tr>
-        <tr>
-            <td><pre><code class="language-html">&lt;strong&gt;</code></pre></td>
-            <td style="vertical-align: middle">Defines important text</td>
-        </tr>
-        <tr>
-            <td><pre><code class="language-html">&lt;sub&gt;</code></pre></td>
-            <td style="vertical-align: middle">Defines subscripted text</td>
-        </tr>
-        <tr>
-            <td><pre><code class="language-html">&lt;sup&gt;</code></pre></td>
-            <td style="vertical-align: middle">Defines superscripted text</td>
-        </tr>
-        <tr>
-            <td><pre><code class="language-html">&lt;u&gt;</code></pre></td>
-            <td style="vertical-align: middle">Defines some text that is unarticulated and styled differently from normal text. </td>
+<tr>
+    <td>
+        <select class="shadow py-2 px-2" id="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </select>
+          <br><br>
+        Code --&gt;       
+    </td>
+    <td>
+<pre><code class="language-html">&lt;select name="cars" id="cars"&gt;
+    &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+    &lt;option value="saab"&gt;Saab&lt;/option&gt;
+    &lt;option value="mercedes"&gt;Mercedes&lt;/option&gt;
+    &lt;option value="audi"&gt;Audi&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+<br>
+    </td>
+</tr>
         </tr>
     </tbody>
     </table></div></li>
-    
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title">Other HTML tags image , link</h4>
+    <table class="w3-table-all notranslate">
+    <tbody>
+        <tr>
+            <th style="width:20%">Tag</th>
+            <th style="vertical-align: middle">Description</th>
+        </tr>
+        <tr>
+            <td>Image<pre><code class="language-html">&lt;img&gt;</code> </pre></td>
+            <td style="vertical-align: middle">tag is used to embed an image in an HTML page.<br>
+            <u>Attributes:</u>
+                <dl>
+                <dt>src</dt>
+                <dd>Specifies the path to the image.</dd>
+                <dt>alt</dt>
+                <dd>Specifies an alternate text for the image, if the image for some reason cannot be displayed</dd>
+                </dl>
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td>Hyperlink<pre><code class="language-html">&lt;a&gt;</code></pre></td>
+            <td style="vertical-align: middle">  tag defines a hyperlink, which is used to link from one page to another.<br>
+                The most important attribute of the <code class="language-html">&lt;a&gt;</code> element is the <code class="language-html"> href=""</code> attribute, which indicates the link's destination.<br>
+            <br>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+</div></li>
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title">HTML List Ordered List </h4>
+    <p>The <code class="language-html">&lt;ol&gt; </code> tag defines an ordered (oulleted) list. An ordered list can be numerical or alphabetical.<br>
+    Use the <code class="language-html">&lt;ol&gt; </code> tag together with the <code class="language-html">&lt;li&gt; </code> tag to create ordered lists.
+<table>
+<tr>
+    <th>Code</th>
+    <th>Output</th>
+</tr>
+<tr>
+    <td>
+<pre><code class="language-html">&lt;ol reversed="3" start="5" type="1|A|a|i|I"&gt;
+    &lt;li&gt;Coffee&lt;/li&gt;
+    &lt;li&gt;Tea&lt;/li&gt;
+    &lt;li&gt;Milk&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+    </td>
+    <td>
+        <ol reversed="3" start="5" type="1|A|a|i|I">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ol>
+    </td>
+</tr>
+
+    </table></p>
+    <h4 class="text-gray-title">HTML List UnOrdered (Bulleted) List </h4>
+    <p>The <code class="language-html">&lt;ul&gt; </code> tag defines an unordered (bulleted) list. <br>
+    Use the <code class="language-html">&lt;ul&gt; </code> tag together with the <code class="language-html">&lt;li&gt; </code> tag to create unordered lists.
+<table>
+<tr>
+    <th>Code</th>
+    <th>Output</th>
+</tr>
+<tr>
+    <td>
+<pre><code class="language-html">&lt;ul style="list-style-type: square|circle"&gt;
+    &lt;li&gt;Volvo&lt;/li&gt;
+    &lt;li&gt;Saab&lt;/li&gt;
+    &lt;li&gt;Mercedes&lt;/li&gt;
+    &lt;li&gt;Audi&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </td>
+    <td>
+        <ul style="list-style-type: square">
+            <li>Volvo</li>
+            <li>Saab</li>
+            <li>Mercedes</li>
+            <li>Audi</li>
+        </ul>
+    </td></tr></table></p>
+</div></li>
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title">HTML Tables</h4>
+    <p>
+        <dl>
+            <dt>
+                
+            </dt>
+        </dl>
+    </p>
+</div></li>
 
 </ul>
                             </div>
