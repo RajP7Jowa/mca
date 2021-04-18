@@ -772,6 +772,55 @@
     </p>
 </div></li>
 
+<li class="ksbox bg-gray-100 shadow hover:shadow-md"><div><h4 class="text-gray-title"> HTML Form with PHP</h4>
+<p>Use form controls and Post method</p>
+<strong>Front End <u>index.html</u> file </strong>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;title&gt;Registration Form&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;form action="reg.php" method="POST"&gt;
+            &lt;h1&gt;Registration Form &lt;/h1&gt;
+            &lt;label for="sname"&gt;Student Name :&lt;/label&gt;
+            &lt;input type="text" name="sname" id="sname"&gt;
+            &lt;br&gt;&lt;br&gt;
+            &lt;label for="smob"&gt;Mobile :&lt;/label&gt;
+            &lt;input type="number" name="smob" id="smob"&gt;
+            &lt;br&gt;&lt;br&gt;
+            &lt;label for="grad"&gt;Graduate :&lt;/label&gt;
+            &lt;input type="checkbox" name="grad" id="grad" value="Graduate"&gt;
+            &lt;br&gt;&lt;br&gt;
+            &lt;label for="gender"&gt;Gender : &lt;/label&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &lt;input type="radio" name="gen" value="Male"&gt; Male &nbsp;&nbsp;&nbsp;
+            &lt;input type="radio" name="gen" value="FeMale"&gt;FeMale
+            &lt;br&gt;&lt;br&gt;
+            &lt;input type="Submit" value="Register"&gt;
+        &lt;/form&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<strong>Back End <u>reg.php</u> file </strong>
+<pre><code class="language-php">&lt;h1&gt;Student Form Submitted Value&lt;/h1&gt;
+&lt;?php    
+    //for input type text >> student name
+    if($_POST["sname"] !=""){
+        echo "&lt;br&gt; Student Name :".$_POST["sname"];
+    }
+    //for input type number >> mobile
+    if($_POST["smob"] !=""){
+        echo "&lt;br&gt; Mobile :".$_POST["smob"];
+    }
+    //for checkbox
+    if(isset($_POST["grad"])){
+        echo "&lt;br&gt; You are Graduate.";
+    }else{
+        echo "&lt;br&gt; You are not Graduate.";
+    }
+    if(isset($_POST["gen"])){
+        echo "&lt;br&gt; Gender :". $_POST["gen"];
+    }
+?&gt;</code></pre></div></li>
 </ul>
                             </div>
                         </div>
