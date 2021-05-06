@@ -12,6 +12,14 @@
             padding-left: 0.5rem;
             color: #555;
         }
+        .blinking{
+                animation:blinkingText 0.5s infinite;
+            }
+            @keyframes blinkingText{
+                0%{}
+                50%{color: transparent;	}
+                100%{}
+            }
     </style>
 </head>
 
@@ -41,9 +49,17 @@
                     <div class="bg-white rounded-md my-auto shadow hover:shadow-md py-4">
                         <div class="px-2 md:px-12 max-w-full">
                             <h4 class="text-gray-title"  style="margin-bottom: 0;"> Offline Tutorials PDF</h4>
-                            <h5 title="Please click on this link..." ><a href="tutorial_html.pdf" download="HTML_Tutorial_PDF">HTML Documentation  </a></h5>
-                            <h5 title="Please click on this link..." ><a href="tutorial_css.pdf" onclick="alert('Upload soon ...'); return false;" download="CSS_Tutorial_PDF">CSS <small>(Upload date: Wednesday, May 05, 2021, 10:00 PM)</small></a></h5>
-                            <h5 title="Please click on this link..." ><a href="tutorial_php.pdf" onclick="alert('Upload soon ...'); return false;" download="PHP_Tutorial_PDF">PHP <small>(Upload date: Wednesday, May 10, 2021, 10:00 PM)</small></a></h5>
+                            <ul>
+                                <li>
+                                    <h5 title="Please click on this link..." ><a href="tutorial_html.pdf" download="HTML_Tutorial_PDF">HTML Documentation Hindi <small class="blinking" style="color: green;">PDF Download</small></a></h5>
+                                </li>
+                                <li>
+                                    <h5 title="Please click on this link..." ><a href="tutorial_css.pdf"  download="CSS_Tutorial_PDF">CSS Tutorial Hindi <small class="blinking" style="animation-delay: 0.1s; color: green;">PDF Download</small></a></h5>
+                                </li>
+                                <li>
+                                    <h5 title="Please click on this link..." ><a href="tutorial_php.pdf" onclick="alert('Upload soon ...'); return false;" download="PHP_Tutorial_PDF">PHP Notes <small class="blinking" style="animation-delay: 0.2s; color: red;">(Upload date: Wednesday, May 10, 2021, 10:00 PM)</small></a></h5>
+                                </li>
+                            </ul>
                             <hr style="border-width: 1px;">
                             <h4 class="text-gray-title"  style="margin-bottom: 0;"> PHP Online Tutorials</h4>
                             <ul>
@@ -63,7 +79,7 @@
                             <hr style="border-width: 1px;">
                             <h4 class="text-gray-title" style="margin-bottom: 0;"> Android Applications</h4>
                             <ul>
-                                <li><a title="Please click on this link..." href="https://play.google.com/store/apps/details?id=com.sylkat.apache"><b>Localhost Server</b> : AWeb Server PHPMyAdmi / MySQL</a></li>
+                                <li><a title="Please click on this link..." href="https://play.google.com/store/apps/details?id=com.sylkat.apache"><b>Localhost Server</b> : AWeb Server PHPMyAdmin / MySQL</a></li>
                                 <li><a title="Please click on this link..." href="https://play.google.com/store/apps/details?id=org.kidinov.awd"><b>Code Editor</b> : AWD - PHP / HTML / CSS / JS IDE</a></li>
                             </ul>
                         </div>
