@@ -1109,10 +1109,12 @@ Type |type.jpg| PHP डेटा प्रकारों का उपयोग
                   $linedata = fgets($myfile);
                   //convert string to array first remove separated sing |
                   $array = explode("|", $linedata);
-                  // print link 
-                  echo '&lt;a href="#" class="list-group-item"&gt;'
-                     . $array[0]
-                     . "&lt;/a&gt;";
+                  // print link
+                  ?&gt;
+                  &lt;a href="#" class="list-group-item" &gt;
+                    &lt;?php echo $array[0]; ?&gt;
+                  &lt;/a&gt;
+                  &lt;?php 
                }
                fclose($myfile);
                ?&gt;
