@@ -1110,12 +1110,20 @@ To make a cell span more than one row, use the <code class="language-html"> rows
                                             <p>Create dynamic page with Bootstrap css and get data from text file </p>
                                             <strong> Targeted output </strong>
                                             <img src="assets/demodynamic.png" style="width: 100%; height: auto;">
-
-                                            Normal Text File <strong><u>fileData.txt</u></strong> data separate(divide)
-                                            with <code class="language-html">&nbsp; &nbsp; | </code> sign <br>
-                                            <pre><code class="language-php">Variable11111 | variable.jpg | <p>PHP में, variable name के बाद एक $ चिह्न का उपयोग करके एक variable घोषित किया जाता है। यहाँ, variable के बारे में जानने के लिए कुछ महत्वपूर्ण points है:</p><p>चूंकि PHP एक loosely typed language है, इसलिए हमें variable के data types को घोषित करने की आवश्यकता नहीं है। यह स्वचालित रूप से मूल्यों का विश्लेषण करता है और इसके सही डेटाटाइप पर conversion करता है।</p><p>एक variable घोषित करने के बाद, इसे पूरे कोड में पुन: उपयोग किया जा सकता है।</p><p>Assignment operator (=) का उपयोग variable को value असाइन करने के लिए किया जाता है।</p>
-Constants | constant.jpg | constants नाम या identifier होते हैं, जो magic constants को छोड़कर स्क्रिप्ट के निष्पादन के दौरान नहीं बदले जा सकते हैं, जो वास्तव में constants नहीं हैं।
-Type | type.jpg | PHP डेटा प्रकारों का उपयोग विभिन्न प्रकार के डेटा या values को रखने के लिए किया जाता है। PHP 8 primitive data types का समर्थन करती है </code></pre>
+                                            <strong> Download </strong>
+                                            <ul>
+                                                <li><a href="assets/filedata.txt" download="filedata.txt">filedata.txt</a></li>
+                                                <li><a href="assets/index.php" download="index.php">index.php</a></li>
+                                                <li><a href="assets/topic.jpg" download="topic.jpg">image1: topic</a></li>
+                                                <li><a href="assets/constant.jpg" download="constant.jpg">image2: constant</a></li>
+                                                <li><a href="assets/type.jpg" download="type.jpg">image3: type</a></li>
+                                                <li><a href="assets/variable.jpg" download="variable.jpg">image4: variable</a></li>
+                                            </ul>
+                                            <br>
+                                            Normal Text File <strong><u>fileData.txt</u></strong> data separate(divide) with <code class="language-html">&nbsp; &nbsp; | </code> sign <br>
+                                            <pre><code class="language-php">Variable11111 |variable.jpg| <p>PHP में, variable name के बाद एक $ चिह्न का उपयोग करके एक variable घोषित किया जाता है। यहाँ, variable के बारे में जानने के लिए कुछ महत्वपूर्ण points है:</p><p>चूंकि PHP एक loosely typed language है, इसलिए हमें variable के data types को घोषित करने की आवश्यकता नहीं है। यह स्वचालित रूप से मूल्यों का विश्लेषण करता है और इसके सही डेटाटाइप पर conversion करता है।</p><p>एक variable घोषित करने के बाद, इसे पूरे कोड में पुन: उपयोग किया जा सकता है।</p><p>Assignment operator (=) का उपयोग variable को value असाइन करने के लिए किया जाता है।</p>
+Constants |constant.jpg| constants नाम या identifier होते हैं, जो magic constants को छोड़कर स्क्रिप्ट के निष्पादन के दौरान नहीं बदले जा सकते हैं, जो वास्तव में constants नहीं हैं।
+Type |type.jpg| PHP डेटा प्रकारों का उपयोग विभिन्न प्रकार के डेटा या values को रखने के लिए किया जाता है। PHP 8 primitive data types का समर्थन करती है </code></pre>
                                             <strong>Main php file <u>index.php</u> </strong>
                                             <pre><code class="language-php">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -1196,10 +1204,12 @@ Type | type.jpg | PHP डेटा प्रकारों का उपयो�
                   $linedata = fgets($myfile);
                   //convert string to array first remove separated sing |
                   $array = explode("|", $linedata);
-                  // print link 
-                  echo '&lt;a href="#" class="list-group-item"&gt;'
-                     . $array[0]
-                     . "&lt;/a&gt;";
+                  // print link
+                  ?&gt;
+                  &lt;a href="#" class="list-group-item" &gt;
+                    &lt;?php echo $array[0]; ?&gt;
+                  &lt;/a&gt;
+                  &lt;?php 
                }
                fclose($myfile);
                ?&gt;
