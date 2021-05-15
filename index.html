@@ -1236,21 +1236,20 @@ Type |type.jpg| PHP डेटा प्रकारों का उपयोग
                                             
                                             <h4 class="text-gray-title"> MySQL Operation</h4>
                                             <ul>
-                                                <li>Connrecting DataBase open <br>
-                                                <code class="language-php">&lt;?php
+                                                <li>Connrecting DataBase open <br><pre><code class="language-php">&lt;?php
 $host_name = "localhost";
 $user_name ="root";   $password= "root"; // null for ""
 $database = "project_database"; //school_management_system
 $connection_variable = mysqli_connect($host_name, $user_name, $password, $database); 
-                                                    ?&gt;</code>
+                                                    ?&gt;</code></pre>
                                                 </li>
                                                 <li>Connrecting DataBase Close <br>
-                                                <code class="language-php">mysqli_close(connection_variable);</code>
+                                                <pre><code class="language-php">mysqli_close(connection_variable);</code></pre>
                                                 </li>
                                             </ul>
                                             <ul>
                                                 <li>Create table <br>
-                                                <code class="language-php">&lt;?php
+                                                <pre><code class="language-php">&lt;?php
 $query =
     "CREATE TABLE `student_records_table`(
    	    `sid` int(100) NOT NULL AUTO_INCREMENT PRIMARY KEY, 
@@ -1264,13 +1263,13 @@ $query =
     } else {
         message("Error" . mysqli_error($connection));
     }
-?&gt;</code>
+?&gt;</code></pre>
                                                 </li>
                                                 <li>Delete table <br>
-                                                <code class="language-php">&lt;?php
+                                                <pre><code class="language-php">&lt;?php
 $tb_delete = "DROP TABLE student"; 
 mysqli_query($connection_variable, $tb_delete );
-?&gt;</code>
+?&gt;</code></pre>
                                                 </li>
                                             </ul>
                                             <h4>MySQL Operation Code Example</h4>
