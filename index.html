@@ -890,7 +890,6 @@
                                             <table style="width: 100%">
                                                 <tr>
                                                     <th><u> Code</u></th>
-                                                    <th><u> Output</u></th>
                                                 </tr>
                                                 <tr>
                                                     <td>
@@ -899,7 +898,12 @@
     &lt;li&gt;Tea&lt;/li&gt;
     &lt;li&gt;Milk&lt;/li&gt;
 &lt;/ol&gt;</code></pre>
-                                                    </td>
+                                                    </td></tr>
+                                                <tr>
+                                                    <th><u> Output</u></th>
+                                                </tr>
+                                                
+                                                <tr>
                                                     <td>
                                                         <ol reversed="3" start="5" type="1|A|a|i|I">
                                                             <li>Coffee</li>
@@ -920,7 +924,6 @@
                                             <table style="width: 100%">
                                                 <tr>
                                                     <th><u> Code</u></th>
-                                                    <th><u> Output</u></th>
                                                 </tr>
                                                 <tr>
                                                     <td>
@@ -930,8 +933,12 @@
     &lt;li&gt;Mercedes&lt;/li&gt;
     &lt;li&gt;Audi&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
-                                                    </td>
-                                                    <td>
+                                                    </td></tr>
+                                                    <tr>
+                                                    <th><u>Output</u></th>
+                                                </tr>
+                                                
+                                                    <tr><td>
                                                         <ul style="list-style-type: square">
                                                             <li>Volvo</li>
                                                             <li>Saab</li>
@@ -1230,6 +1237,124 @@ Type |type.jpg| PHP डेटा प्रकारों का उपयोग
                                             </code></pre>
                                         </div>
                                     </li>
+
+<li class="ksbox bg-gray-100 shadow hover:shadow-md">
+                                        <div>
+                                            
+                                            <h4 class="text-gray-title"> MySQL Operation</h4>
+                                            <ul>
+                                                <li>Connrecting DataBase open <br><pre><code class="language-php">&lt;?php
+$host_name = "localhost";
+$user_name ="root";   $password= "root"; // null for ""
+$database = "project_database"; //school_management_system
+$connection_variable = mysqli_connect($host_name, $user_name, $password, $database); 
+?&gt;</code></pre>
+                                                </li>
+                                                <li>Connrecting DataBase Close <br>
+                                                <pre><code class="language-php">&lt;?php
+mysqli_close(connection_variable);
+?&gt;</code></pre>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>Create table <br>
+                                                <pre><code class="language-php">&lt;?php
+$query =
+    "CREATE TABLE `student_records_table`(
+   	    `sid` int(100) NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+        `student_name` varchar(255) NOT NULL,
+        `percentages` int(100) DEFAULT NULL,
+        `grade` varchar(10) DEFAULT NULL
+    )";
+    $sucees = mysqli_query($connection, $query);
+    if ($sucees) {
+        message("Table Created successfully. :)");
+    } else {
+        message("Error" . mysqli_error($connection));
+    }
+?&gt;</code></pre>
+                                                </li>
+                                                <li>Delete table <br>
+                                                <pre><code class="language-php">&lt;?php
+$tb_delete = "DROP TABLE student"; 
+mysqli_query($connection_variable, $tb_delete );
+?&gt;</code></pre>
+                                                </li>
+                                            </ul>
+                                            <h4>MySQL Operation Code Example</h4>
+                                            <pre><code class="language-php">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;style&gt;
+        ul.breadcrumb {padding: 10px 16px;list-style: none;background-color: #eee;}
+        ul.breadcrumb li {display: inline;font-size: 18px;}
+        ul.breadcrumb li+li:before {padding: 8px;color: black;content: "/\00a0";}
+        ul.breadcrumb li a {color: #0275d8;text-decoration: none;}
+        ul.breadcrumb li a:hover {color: #01447e;text-decoration: underline;}
+        /* Style the header */
+        .header {background-color: #f1f1f1;padding: 20px;text-align: center;}
+        .alert {padding: 20px;background-color: #f44336; color: white;}
+        .closebtn {margin-left: 15px;color: white; font-weight: bold;float: right;font-size: 22px; line-height: 20px;cursor: pointer;transition: 0.3s;}
+        .closebtn:hover {color: black;}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class="header"&gt;
+        &lt;h1&gt;MySQL&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;ul class="breadcrumb"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;MySQL&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#"&gt;DataBase&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="#"&gt;Table&lt;/a&gt;&lt;/li&gt;&lt;li&gt;CRUD Operation&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h2&gt; MySql Outout &lt;/h2&gt;
+
+
+    &lt;?php
+    function message($message2)
+    { //Print message box
+        echo '&lt;div class="alert"&gt;&lt;span class="closebtn" onclick="this.parentElement.style.display=\'none\';"&gt;&times;&lt;/span&gt;' . $message2 . '&lt;/div&gt;';
+    }
+    ?&gt;
+
+
+    &lt;?php
+    /**Connection on MySQL */
+
+    $connection = mysqli_connect("localhost", "root", "", "college_management_sytem_db");
+    if ($connection) {
+        message("Connected Successfully.");
+    } else {
+        message("sorry not connected");
+    }
+
+    /**Create table inside on databse  */
+    $query =
+        "CREATE TABLE `student_records_table`(
+   	        `sid` int(100) NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+            `student_name` varchar(255) NOT NULL,
+            `percentages` int(100) DEFAULT NULL,
+            `grade` varchar(10) DEFAULT NULL
+        )";
+    $sucees = mysqli_query($connection, $query);
+    if ($sucees) {
+        message("Table Created successfully. :)");
+    } else {
+        message("Error" . mysqli_error($connection));
+    }
+
+    mysqli_close($connection);
+
+    ?&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </li>
+
+
+
                                 </ul>
                             </div>
                         </div>
