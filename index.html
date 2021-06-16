@@ -898,11 +898,12 @@
     &lt;li&gt;Tea&lt;/li&gt;
     &lt;li&gt;Milk&lt;/li&gt;
 &lt;/ol&gt;</code></pre>
-                                                    </td></tr>
+                                                    </td>
+                                                </tr>
                                                 <tr>
                                                     <th><u> Output</u></th>
                                                 </tr>
-                                                
+
                                                 <tr>
                                                     <td>
                                                         <ol reversed="3" start="5" type="1|A|a|i|I">
@@ -933,12 +934,14 @@
     &lt;li&gt;Mercedes&lt;/li&gt;
     &lt;li&gt;Audi&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
-                                                    </td></tr>
-                                                    <tr>
+                                                    </td>
+                                                </tr>
+                                                <tr>
                                                     <th><u>Output</u></th>
                                                 </tr>
-                                                
-                                                    <tr><td>
+
+                                                <tr>
+                                                    <td>
                                                         <ul style="list-style-type: square">
                                                             <li>Volvo</li>
                                                             <li>Saab</li>
@@ -1020,7 +1023,8 @@
     
 &lt;/html&gt;</code></pre>
                                             <p>
-                                                To make a cell span more than one column, use the <code class="language-html"> colspan="number"</code> attribute.
+                                                To make a cell span more than one column, use the <code
+                                                    class="language-html"> colspan="number"</code> attribute.
                                             </p>
                                             <pre><code class="language-html"> &lt;table style="width:100%">
 &lt;tr&gt;
@@ -1035,12 +1039,13 @@
 &lt;/table&gt; &gt;</code></pre>
 
 
-<p>
-    
+                                            <p>
 
-To make a cell span more than one row, use the <code class="language-html"> rowspan="number"</code> attribute.
-</p>
-<pre><code class="language-html">  &lt;table style="width:100%"&gt;
+
+                                                To make a cell span more than one row, use the <code
+                                                    class="language-html"> rowspan="number"</code> attribute.
+                                            </p>
+                                            <pre><code class="language-html">  &lt;table style="width:100%"&gt;
     &lt;tr&gt;
       &lt;th&gt;Name:&lt;/th&gt;
       &lt;td&gt;Bill Gates&lt;/td&gt;
@@ -1119,15 +1124,20 @@ To make a cell span more than one row, use the <code class="language-html"> rows
                                             <img src="assets/demodynamic.png" style="width: 100%; height: auto;">
                                             <strong> Download </strong>
                                             <ul>
-                                                <li><a href="assets/filedata.txt" download="filedata.txt">filedata.txt</a></li>
+                                                <li><a href="assets/filedata.txt"
+                                                        download="filedata.txt">filedata.txt</a></li>
                                                 <li><a href="assets/index.php" download="index.php">index.php</a></li>
-                                                <li><a href="assets/topic.jpg" download="topic.jpg">image1: topic</a></li>
-                                                <li><a href="assets/constant.jpg" download="constant.jpg">image2: constant</a></li>
+                                                <li><a href="assets/topic.jpg" download="topic.jpg">image1: topic</a>
+                                                </li>
+                                                <li><a href="assets/constant.jpg" download="constant.jpg">image2:
+                                                        constant</a></li>
                                                 <li><a href="assets/type.jpg" download="type.jpg">image3: type</a></li>
-                                                <li><a href="assets/variable.jpg" download="variable.jpg">image4: variable</a></li>
+                                                <li><a href="assets/variable.jpg" download="variable.jpg">image4:
+                                                        variable</a></li>
                                             </ul>
                                             <br>
-                                            Normal Text File <strong><u>fileData.txt</u></strong> data separate(divide) with <code class="language-html">&nbsp; &nbsp; | </code> sign <br>
+                                            Normal Text File <strong><u>fileData.txt</u></strong> data separate(divide)
+                                            with <code class="language-html">&nbsp; &nbsp; | </code> sign <br>
                                             <pre><code class="language-php">Variable11111 |variable.jpg| <p>PHP में, variable name के बाद एक $ चिह्न का उपयोग करके एक variable घोषित किया जाता है। यहाँ, variable के बारे में जानने के लिए कुछ महत्वपूर्ण points है:</p><p>चूंकि PHP एक loosely typed language है, इसलिए हमें variable के data types को घोषित करने की आवश्यकता नहीं है। यह स्वचालित रूप से मूल्यों का विश्लेषण करता है और इसके सही डेटाटाइप पर conversion करता है।</p><p>एक variable घोषित करने के बाद, इसे पूरे कोड में पुन: उपयोग किया जा सकता है।</p><p>Assignment operator (=) का उपयोग variable को value असाइन करने के लिए किया जाता है।</p>
 Constants |constant.jpg| constants नाम या identifier होते हैं, जो magic constants को छोड़कर स्क्रिप्ट के निष्पादन के दौरान नहीं बदले जा सकते हैं, जो वास्तव में constants नहीं हैं।
 Type |type.jpg| PHP डेटा प्रकारों का उपयोग विभिन्न प्रकार के डेटा या values को रखने के लिए किया जाता है। PHP 8 primitive data types का समर्थन करती है </code></pre>
@@ -1238,12 +1248,13 @@ Type |type.jpg| PHP डेटा प्रकारों का उपयोग
                                         </div>
                                     </li>
 
-<li class="ksbox bg-gray-100 shadow hover:shadow-md">
+                                    <li class="ksbox bg-gray-100 shadow hover:shadow-md">
                                         <div>
-                                            
+
                                             <h4 class="text-gray-title"> MySQL Operation</h4>
                                             <ul>
-                                                <li>Connrecting DataBase open <br><pre><code class="language-php">&lt;?php
+                                                <li>Connrecting DataBase open <br>
+                                                    <pre><code class="language-php">&lt;?php
 $host_name = "localhost";
 $user_name ="root";   $password= "root"; // null for ""
 $database = "project_database"; //school_management_system
@@ -1251,14 +1262,14 @@ $connection_variable = mysqli_connect($host_name, $user_name, $password, $databa
 ?&gt;</code></pre>
                                                 </li>
                                                 <li>Connrecting DataBase Close <br>
-                                                <pre><code class="language-php">&lt;?php
+                                                    <pre><code class="language-php">&lt;?php
 mysqli_close(connection_variable);
 ?&gt;</code></pre>
                                                 </li>
                                             </ul>
                                             <ul>
                                                 <li>Create table <br>
-                                                <pre><code class="language-php">&lt;?php
+                                                    <pre><code class="language-php">&lt;?php
 $query =
     "CREATE TABLE `student_records_table`(
    	    `sid` int(100) NOT NULL AUTO_INCREMENT PRIMARY KEY, 
@@ -1275,7 +1286,7 @@ $query =
 ?&gt;</code></pre>
                                                 </li>
                                                 <li>Delete table <br>
-                                                <pre><code class="language-php">&lt;?php
+                                                    <pre><code class="language-php">&lt;?php
 $tb_delete = "DROP TABLE student"; 
 mysqli_query($connection_variable, $tb_delete );
 ?&gt;</code></pre>
@@ -1370,9 +1381,9 @@ mysqli_query($connection_variable, $tb_delete );
                 <div class="flex flex-wrap items-center md:justify-between justify-center">
                     <div class="w-full md:w-4/12">
                         <div class="text-sm text-gray-title font-semibold py-1 text-center md:text-left">
-                            <a href="http://grkistmca.co.in/"
+                            <a href="mailto:rajp7jowa@yopmail.com?subject=PHP%20Project%20enquiry&body=Jai%20Hind!"
                                 class="text-gray-title hover:text-gray-title text-sm font-semibold py-1">
-                                GRKIST Jabalpur
+                                Contact us
                             </a>
                         </div>
                     </div>
@@ -1404,8 +1415,14 @@ mysqli_query($connection_variable, $tb_delete );
                     li[i].style.display = "none";
                 }
             }
-
         });
+
+        if (window.location.hash) {
+            var hash = window.location.hash.substring(1);
+            if (hash==="project"){
+                window.location ="project.html";
+            }
+        }
     </script>
 </body>
 
