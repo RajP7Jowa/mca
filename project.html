@@ -320,22 +320,24 @@
                 </div>
                 <div class="relative text-gray-600" style="margin-left:auto;">
                     <div class="text-white">
-                        <a href="index.html" class="btn block ">
-                            Code Examples
-                        </a>
+                        <select class="btn block " id="" onchange="document.getElementById('embedID').src = this.options[this.selectedIndex].value">
+                            <option value="" selected disabled> Select Project</option>
+                            <option value="pdf/report-online-e-learning_aditi.pdf#toolbar=0&navpanes=0&scrollbar=0"> online-e-learning Aditi</option>
+                            <option value="pdf/report-lib-management_rajkumari.pdf#toolbar=0&navpanes=0&scrollbar=0"> lib-management  Rajkumari</option>
+                            <option value="pdf/report-crime-reporting_shivani.pdf#toolbar=0&navpanes=0&scrollbar=0"> crime-reporting Shivani</option>
+                            <option value="pdf/report-crime-reporting_vandana.pdf#toolbar=0&navpanes=0&scrollbar=0"> crime-reporting Vandana</option>
+                        </select>
                     </div>
                 </div>
             </nav>
+
             <div class="flex -mt-cont">
                 <!-- This item will grow -->
                 <div class="container bottom-0 max-w-full mx-auto md:px-12 mb-12">
                     <div class="bg-white-main rounded-md my-auto /*shadow hover:shadow-md*/ py-4 ">
                         <div class="max-w-full text-center">
                             <div class="text-gray-600 text-xl mb-12">
-                                <iframe scrolling="yes" id="gmap_canvas"
-                                    src="https://docs.google.com/forms/d/e/1FAIpQLSewEbFqRV6SZBgCPizKpZ85LHWX4G5y4UXmizPraXr1Zs23BA/viewform?embedded=true"
-                                    marginheight="0" marginwidth="0" style="border:0; width: 100%; height: 100vh;"
-                                    allowfullscreen="" frameborder="0" align="top">Loading…</iframe>
+                                <embed src="" id="embedID" type="application/pdf"  style="border:0; width: 100%; height: 100vh;">Select Project.</embed>
                             </div>
                         </div>
                     </div>
