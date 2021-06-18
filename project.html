@@ -45,7 +45,7 @@
         }
 
         .-mt-cont {
-            margin-top: -20vh;
+            margin-top: -15vh;
         }
 
         .relative {
@@ -265,7 +265,7 @@
             }
 
             .-mt-cont {
-                margin-top: -18vh;
+                margin-top: -15vh;
             }
 
             .mb-12 {
@@ -318,14 +318,14 @@
                         <span class="font-semibold text-xl">P7Jowa</span>
                     </div>
                 </div>
-                <div class="relative text-gray-600" style="margin-left:auto;">
+                <div class="w-full relative text-gray-600" style="margin-left:auto; padding-bottom: 10px;">
                     <div class="text-white">
-                        <select class="btn block " id="" onchange="document.getElementById('embedID').src = this.options[this.selectedIndex].value">
+                        <select class="btn block " id="" onchange="document.getElementById('embedID').data = this.options[this.selectedIndex].value;document.getElementById('embedIDlink').href = this.options[this.selectedIndex].value">
                             <option value="" selected disabled> Select Project</option>
-                            <option value="pdf/report-online-e-learning_aditi.pdf#toolbar=0&navpanes=0&scrollbar=0"> online-e-learning Aditi</option>
-                            <option value="pdf/report-lib-management_rajkumari.pdf#toolbar=0&navpanes=0&scrollbar=0"> lib-management  Rajkumari</option>
-                            <option value="pdf/report-crime-reporting_shivani.pdf#toolbar=0&navpanes=0&scrollbar=0"> crime-reporting Shivani</option>
-                            <option value="pdf/report-crime-reporting_vandana.pdf#toolbar=0&navpanes=0&scrollbar=0"> crime-reporting Vandana</option>
+                            <option value="pdf/report-online-e-learning_aditi.pdf"> online-e-learning Aditi</option>
+                            <option value="pdf/report-lib-management_rajkumari.pdf"> lib-management  Rajkumari</option>
+                            <option value="pdf/report-crime-reporting_shivani.pdf"> crime-reporting Shivani</option>
+                            <option value="pdf/report-crime-reporting_vandana.pdf"> crime-reporting Vandana</option>
                         </select>
                     </div>
                 </div>
@@ -337,14 +337,10 @@
                     <div class="bg-white-main rounded-md my-auto /*shadow hover:shadow-md*/ py-4 ">
                         <div class="max-w-full text-center">
                             <div class="text-gray-600 text-xl mb-12">
-                                <embed src="" id="embedID" type="application/pdf"  style="border:0; width: 100%; height: 100vh;"></embed>
-                                <div class="max-w-full text-center bg-saffron">
-                                    <a class="btn block " href="pdf/report-online-e-learning_aditi.pdf" download=""> Download- online-e-learning Aditi </a>
-                                    <a class="btn block " href="pdf/report-lib-management_rajkumari.pdf" download=""> Download-  lib-management  Rajkumari </a>
-                                    <a class="btn block " href="pdf/report-crime-reporting_shivani.pdf" download=""> Download- crime-reporting Shivani </a>
-                                    <a class="btn block " href="pdf/report-crime-reporting_vandana.pdf" download=""> Download- crime-reporting Vandana </a>
-                                    
-                                </div>
+                                <!-- <embed src="" id="embedID" type="application/pdf"  style="border:0; width: 100%; height: 100vh;"></embed> -->
+                                <object data="" id="embedID" type="application/pdf" style="border:0; width: 100%; height: 100vh;">
+                                    <p>Your web browser doesn't have a PDF plugin. Instead you can <br><br> <a href="#" class="btn" id="embedIDlink" >click here to download the file.</a></p>
+                                </object>
                             </div>
                         </div>
                     </div>
