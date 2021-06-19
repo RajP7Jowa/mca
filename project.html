@@ -40,30 +40,6 @@
             padding: 0;
         }
 
-        .py-cont {
-            height: 30vh;
-        }
-
-        .-mt-cont {
-            margin-top: -15vh;
-        }
-
-        .relative {
-            position: relative;
-        }
-
-        .absolute {
-            position: absolute;
-        }
-
-        .left-0 {
-            left: 0;
-        }
-
-        .top-0 {
-            top: 0;
-        }
-
         .text-white {
             color: rgba(255, 255, 255, 1);
         }
@@ -85,11 +61,6 @@
             background-size: 400% 400%;
             animation: gradient 11s ease infinite;
         }
-
-        .bg-white {
-            background-image: radial-gradient(circle farthest-corner at center, rgba(226, 226, 255, 1) 40%, rgba(255, 255, 255, 1) 100%);
-        }
-
 
 
 
@@ -228,67 +199,8 @@
             padding: .25rem 1rem;
         }
 
-        @media (min-width:640px) {
-            .container {
-                max-width: 640px;
-            }
-        }
-
-        @media (min-width:768px) {
-            .container {
-                max-width: 768px
-            }
-
-            .md\:px-12 {
-                padding-left: 3rem;
-                padding-right: 3rem;
-            }
-
-            .md\:justify-between {
-                justify-content: space-between;
-            }
-
-            .md\:text-left {
-                text-align: left;
-            }
-
-            .md\:w-4\/12 {
-                width: 33.333333%;
-            }
-
-            .md\:w-8\/12 {
-                width: 66.666667%;
-            }
-
-            .md\:justify-end {
-                justify-content: flex-end;
-            }
-
-            .-mt-cont {
-                margin-top: -15vh;
-            }
-
-            .mb-12 {
-                margin-bottom: 15vh;
-            }
-        }
-
-        @media (min-width:1024px) {
-            .container {
-                max-width: 1024px;
-            }
-        }
-
-        @media (min-width:1280px) {
-            .container {
-                max-width: 1280px
-            }
-        }
-
-        @media (min-width:1536px) {
-            .container {
-                max-width: 1536px
-            }
+        .bg-white {
+            background-image: radial-gradient(circle farthest-corner at center, rgba(226, 226, 255, 1) 60%, rgba(255, 255, 255, 1) 100%);
         }
 
         @keyframes gradient {
@@ -304,7 +216,75 @@
                 background-position: 0% 50%;
             }
         }
+
+        #link a {
+            color: royalblue;
+        }
+
+        #link th {
+            text-align: left;
+            padding-right: 20px;
+        }
     </style>
+    <script>
+
+        function changeValue(params) {
+            var name = "";
+            var project_name = "";
+            var project_link = "";
+            var doc_link = "";
+            var pdf_link = "";
+
+            switch (params) {
+                case "ea":
+                    var name = "Aditi";
+                    var project_name = "Online E-Learning System";
+                    var project_link = "<a href='https://github.com/RajP7Jowa/E-LearningSystem/archive/refs/heads/main.zip'>Zip File Download</a> ";
+                    var doc_link = "<a href='https://github.com/RajP7Jowa/E-LearningSystem#readme'>Read Instruction</a>";
+                    var pdf_link = "<a href='pdf/report-online-e-learning_aditi.pdf' download >Download Project report</a>";
+
+                    break;
+                case "lr":
+                    var name = "Rajkumari";
+                    var project_name = "Online Library Management";
+                    var project_link = "<a href='https://github.com/RajP7Jowa/library_management/archive/refs/heads/main.zip'>Zip File Download</a> ";
+                    var doc_link = "<a href='https://github.com/RajP7Jowa/library_management#readme'>Read Instruction</a>";
+                    var pdf_link = "<a href='pdf/report-lib-management_rajkumari.pdf' download >Download Project report</a>";
+
+                    break;
+                case "cs":
+                    var name = "Shivani";
+                    var project_name = "Online Crime Report";
+                    var project_link = "<a href='https://github.com/RajP7Jowa/crime-reporting/archive/refs/heads/main.zip'>Zip File Download</a> ";
+                    var doc_link = "<a href='https://github.com/RajP7Jowa/crime-reporting#readme'>Read Instruction</a>";
+                    var pdf_link = "<a href='pdf/report-crime-reporting_shivani.pdf' download >Download Project report</a>";
+
+                    break;
+                case "cv":
+                    var name = "Vandana";
+                    var project_name = "Online Crime Report";
+                    var project_link = "<a href='https://github.com/RajP7Jowa/crime-reporting/archive/refs/heads/main.zip'>Zip File Download</a> ";
+                    var doc_link = "<a href='https://github.com/RajP7Jowa/crime-reporting#readme'>Read Instruction</a>";
+                    var pdf_link = "<a href='pdf/report-crime-reporting_vandana.pdf' download >Download Project report</a>";
+                    break;
+                default:
+                    var name ="";
+                    var project_name ="";
+                    var project_link ="";
+                    var doc_link ="";
+                    var pdf_link ="";
+                    break;
+            }
+
+
+            if (name != "") { document.getElementById("sname").innerHTML = name; } else { document.getElementById("sname").innerHTML = "---"; }
+            if (project_name != " ") { document.getElementById("pname").innerHTML = project_name; } else { document.getElementById("pname").innerHTML = "---"; }
+            if (project_link != "") { document.getElementById("plink").innerHTML = project_link; } else { document.getElementById("plink").innerHTML = "---"; }
+            if (doc_link != "") { document.getElementById("install").innerHTML = doc_link; } else { document.getElementById("install").innerHTML = "---"; }
+            if (pdf_link != "") { document.getElementById("report").innerHTML = pdf_link; } else { document.getElementById("report").innerHTML = "---"; }
+
+        }
+    </script>
 </head>
 
 <body class="relative bg-green h-screen">
@@ -318,14 +298,14 @@
                         <span class="font-semibold text-xl">P7Jowa</span>
                     </div>
                 </div>
-                <div class="w-full relative text-gray-600" style="margin-left:auto; padding-bottom: 10px;">
+                <div class="w-full relative text-gray-600" style="margin-left:auto; padding: 10px 0px;" align="center">
                     <div class="text-white">
-                        <select class="btn block " id="" onchange="document.getElementById('embedID').data = this.options[this.selectedIndex].value;document.getElementById('embedIDlink').href = this.options[this.selectedIndex].value">
+                        <select class="btn block " id="" onchange="changeValue(this.options[this.selectedIndex].value)">
                             <option value="" selected disabled> Select Project</option>
-                            <option value="pdf/report-online-e-learning_aditi.pdf"> online-e-learning Aditi</option>
-                            <option value="pdf/report-lib-management_rajkumari.pdf"> lib-management  Rajkumari</option>
-                            <option value="pdf/report-crime-reporting_shivani.pdf"> crime-reporting Shivani</option>
-                            <option value="pdf/report-crime-reporting_vandana.pdf"> crime-reporting Vandana</option>
+                            <option value="ea"> Online-e-learning (Aditi</option>
+                            <option value="lr"> Library-management (Rajkumari)</option>
+                            <option value="cs"> Crime-reporting (Shivani)</option>
+                            <option value="cv"> Crime-reporting (Vandana)</option>
                         </select>
                     </div>
                 </div>
@@ -334,13 +314,39 @@
             <div class="flex -mt-cont">
                 <!-- This item will grow -->
                 <div class="container bottom-0 max-w-full mx-auto md:px-12 mb-12">
-                    <div class="bg-white-main rounded-md my-auto /*shadow hover:shadow-md*/ py-4 ">
-                        <div class="max-w-full text-center">
+                    <div class="bg-white-main rounded-md my-auto py-4 ">
+                        <div class="max-w-full">
                             <div class="text-gray-600 text-xl mb-12">
-                                <!-- <embed src="" id="embedID" type="application/pdf"  style="border:0; width: 100%; height: 100vh;"></embed> -->
-                                <object data="" id="embedID" type="application/pdf" style="border:0; width: 100%; height: 100vh;">
-                                    <p>Your web browser doesn't have a PDF plugin. Instead you can <br><br> <a href="#" class="btn" id="embedIDlink" >click here to download the file.</a></p>
-                                </object>
+
+                                <div
+                                    style="padding : 2rem; background-color: rgba(255, 255, 255, 0.4);font-size:medium;">
+                                    <table id="link">
+                                        <tr>
+                                            <th> Student Name </th>
+                                            <td id="sname">---</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th> Project Name </th>
+                                            <td id="pname">---</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th> Installation </th>
+                                            <td id="install">---</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th> Project Link </th>
+                                            <td id="plink">---</td>
+                                        </tr>
+
+                                        <tr>
+                                            <th> Report PDF </th>
+                                            <td id="report">---</td>
+                                        </tr>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
