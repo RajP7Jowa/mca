@@ -62,12 +62,6 @@
             animation: gradient 11s ease infinite;
         }
 
-
-
-        .h-screen {
-            height: 100vh;
-        }
-
         .shadow {
             box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
         }
@@ -82,28 +76,13 @@
         }
 
         .py-4 {
-            padding-top: 0.5rem;
-            padding-bottom: 0.2rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
         }
 
         .max-w-full {
             max-width: 100%
         }
-
-        .mx-auto {
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .my-auto {
-            margin-top: auto;
-            margin-bottom: auto;
-        }
-
-        .mb-12 {
-            margin-bottom: 7vh;
-        }
-
         .z-10 {
             z-index: 10;
         }
@@ -140,7 +119,9 @@
         .border-t-1 {
             border-top-width: 2px
         }
-
+        .border-b-1 {
+            border-bottom-width: 2px
+        }
         .border-gray-300 {
             border-color: rgba(209, 213, 219, 1);
         }
@@ -223,7 +204,7 @@
 
         #link th {
             text-align: left;
-            padding-right: 20px;
+            padding-right: 15px;
         }
     </style>
     <script>
@@ -300,9 +281,9 @@
                 </div>
                 <div class="w-full relative text-gray-600" style="margin-left:auto; padding: 10px 0px;" align="center">
                     <div class="text-white">
-                        <select class="btn block " id="" onchange="changeValue(this.options[this.selectedIndex].value)">
+                        <select class="btn block " id="" onchange="changeValue(this.options[this.selectedIndex].value)" style="padding: 10px 20px;">
                             <option value="" selected disabled> Select Project</option>
-                            <option value="ea"> Online-e-learning (Aditi</option>
+                            <option value="ea"> Online-e-learning (Aditi) </option>
                             <option value="lr"> Library-management (Rajkumari)</option>
                             <option value="cs"> Crime-reporting (Shivani)</option>
                             <option value="cv"> Crime-reporting (Vandana)</option>
@@ -314,12 +295,13 @@
             <div class="flex -mt-cont">
                 <!-- This item will grow -->
                 <div class="container bottom-0 max-w-full mx-auto md:px-12 mb-12">
-                    <div class="bg-white-main rounded-md my-auto py-4 ">
+                    <div class="bg-white-main rounded-md ">
                         <div class="max-w-full">
                             <div class="text-gray-600 text-xl mb-12">
 
                                 <div
-                                    style="padding : 2rem; background-color: rgba(255, 255, 255, 0.4);font-size:medium;">
+                                    style="padding : 2rem 1rem; line-height: 3rem; background-color: rgba(255, 255, 255, 0.4);font-size:medium;">
+                                    <h3 class="border-b-1"> Project Details</h3>
                                     <table id="link">
                                         <tr>
                                             <th> Student Name </th>
@@ -369,8 +351,7 @@
                         <ul class="flex flex-wrap list-none md:justify-end justify-center">
                             <li>
                                 <a class="text-gray-700 hover:text-gray-900 text-sm font-semibold block py-1"
-                                    href="https://m.facebook.com/messages/compose?ids=rajp7jowa"><i>Designed
-                                        by: Raj Parihar</a>
+                                    href="https://m.facebook.com/messages/compose?ids=rajp7jowa"><i style="color: #333333;">Designed by:</i> Raj Parihar</a>
                             </li>
                         </ul>
                     </div>
