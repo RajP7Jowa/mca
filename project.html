@@ -83,6 +83,7 @@
         .max-w-full {
             max-width: 100%
         }
+
         .z-10 {
             z-index: 10;
         }
@@ -119,9 +120,11 @@
         .border-t-1 {
             border-top-width: 2px
         }
+
         .border-b-1 {
             border-bottom-width: 2px
         }
+
         .border-gray-300 {
             border-color: rgba(209, 213, 219, 1);
         }
@@ -212,8 +215,8 @@
         function changeValue(params) {
             var name = "";
             var project_name = "";
-            var project_link = "";
-            var doc_link = "";
+            var project_link = "---";
+            var doc_link = "---";
             var pdf_link = "";
 
             switch (params) {
@@ -222,46 +225,44 @@
                     var project_name = "Online E-Learning System";
                     var project_link = "<a href='https://github.com/RajP7Jowa/E-LearningSystem/archive/refs/heads/main.zip'>Zip File Download</a> ";
                     var doc_link = "<a href='https://github.com/RajP7Jowa/E-LearningSystem#readme'>Read Instruction</a>";
-                    var pdf_link = "<a href='pdf/report-online-e-learning_aditi.pdf' download >Download Project report</a>";
-
+                    var pdf_link = "<a href='./project_report/report-online-e-learning_aditi.pdf' download >Download Project report</a>";
                     break;
                 case "lr":
                     var name = "Rajkumari";
                     var project_name = "Online Library Management";
                     var project_link = "<a href='https://github.com/RajP7Jowa/library_management/archive/refs/heads/main.zip'>Zip File Download</a> ";
                     var doc_link = "<a href='https://github.com/RajP7Jowa/library_management#readme'>Read Instruction</a>";
-                    var pdf_link = "<a href='pdf/report-lib-management_rajkumari.pdf' download >Download Project report</a>";
-
+                    var pdf_link = "<a href='./project_report/lib-management_rajkumari.pdf' download >Download Project report</a>";
                     break;
                 case "cs":
                     var name = "Shivani";
                     var project_name = "Online Crime Report";
                     var project_link = "<a href='https://github.com/RajP7Jowa/crime-reporting/archive/refs/heads/main.zip'>Zip File Download</a> ";
                     var doc_link = "<a href='https://github.com/RajP7Jowa/crime-reporting#readme'>Read Instruction</a>";
-                    var pdf_link = "<a href='pdf/report-crime-reporting_shivani.pdf' download >Download Project report</a>";
-
+                    var pdf_link = "<a href='./project_report/crime-reporting_shivani.pdf' download >Download Project report</a>";
                     break;
                 case "cv":
                     var name = "Vandana";
                     var project_name = "Online Crime Report";
                     var project_link = "<a href='https://github.com/RajP7Jowa/crime-reporting/archive/refs/heads/main.zip'>Zip File Download</a> ";
                     var doc_link = "<a href='https://github.com/RajP7Jowa/crime-reporting#readme'>Read Instruction</a>";
-                    var pdf_link = "<a href='pdf/report-crime-reporting_vandana.pdf' download >Download Project report</a>";
+                    var pdf_link = "<a href='./project_report/crime-reporting_vandana.pdf' download >Download Project report</a>";
+
                     break;
                 default:
-                    var name ="";
-                    var project_name ="";
-                    var project_link ="";
-                    var doc_link ="";
-                    var pdf_link ="";
+                    var name = "";
+                    var project_name = "";
+                    var project_link = "";
+                    var doc_link = "";
+                    var pdf_link = "";
                     break;
             }
 
 
             if (name != "") { document.getElementById("sname").innerHTML = name; } else { document.getElementById("sname").innerHTML = "---"; }
             if (project_name != " ") { document.getElementById("pname").innerHTML = project_name; } else { document.getElementById("pname").innerHTML = "---"; }
-            if (project_link != "") { document.getElementById("plink").innerHTML = project_link; } else { document.getElementById("plink").innerHTML = "---"; }
-            if (doc_link != "") { document.getElementById("install").innerHTML = doc_link; } else { document.getElementById("install").innerHTML = "---"; }
+            // if (project_link != "") { document.getElementById("plink").innerHTML = project_link; } else { document.getElementById("plink").innerHTML = "---"; }
+            // if (doc_link != "") { document.getElementById("install").innerHTML = doc_link; } else { document.getElementById("install").innerHTML = "---"; }
             if (pdf_link != "") { document.getElementById("report").innerHTML = pdf_link; } else { document.getElementById("report").innerHTML = "---"; }
 
         }
@@ -281,7 +282,8 @@
                 </div>
                 <div class="w-full relative text-gray-600" style="margin-left:auto; padding: 10px 0px;" align="center">
                     <div class="text-white">
-                        <select class="btn block " id="" onchange="changeValue(this.options[this.selectedIndex].value)" style="padding: 10px 20px;">
+                        <select class="btn block " id="" onchange="changeValue(this.options[this.selectedIndex].value)"
+                            style="padding: 10px 20px;">
                             <option value="" selected disabled> Select Project</option>
                             <option value="ea"> Online-e-learning (Aditi) </option>
                             <option value="lr"> Library-management (Rajkumari)</option>
@@ -307,25 +309,21 @@
                                             <th> Student Name </th>
                                             <td id="sname">---</td>
                                         </tr>
-
                                         <tr>
                                             <th> Project Name </th>
                                             <td id="pname">---</td>
                                         </tr>
-
-                                        <tr>
-                                            <th> Installation </th>
-                                            <td id="install">---</td>
-                                        </tr>
-
-                                        <tr>
-                                            <th> Project Link </th>
-                                            <td id="plink">---</td>
-                                        </tr>
-
                                         <tr>
                                             <th> Report PDF </th>
                                             <td id="report">---</td>
+                                        </tr>
+                                        <tr>
+                                            <th> Installation Instruction</th>
+                                            <td id="install">---</td>
+                                        </tr>
+                                        <tr>
+                                            <th> Project Link </th>
+                                            <td id="plink">---</td>
                                         </tr>
                                     </table>
                                 </div>
@@ -351,7 +349,8 @@
                         <ul class="flex flex-wrap list-none md:justify-end justify-center">
                             <li>
                                 <a class="text-gray-700 hover:text-gray-900 text-sm font-semibold block py-1"
-                                    href="https://m.facebook.com/messages/compose?ids=rajp7jowa"><i style="color: #333333;">Designed by:</i> Raj Parihar</a>
+                                    href="https://m.facebook.com/messages/compose?ids=rajp7jowa"><i
+                                        style="color: #333333;">Designed by:</i> Raj Parihar</a>
                             </li>
                         </ul>
                     </div>
