@@ -147,7 +147,6 @@ input {
 }
 .timespan {
   color: gray;
-  padding-right: 10px;
   font-size: small;
 }
 </style>
@@ -196,7 +195,7 @@ list.addEventListener('click', function(ev) {
 function newElement() {
   var li = document.createElement("li");
   var d = new Date().toLocaleTimeString();
-  var timespan = document.createElement("code");
+  var timespan = document.createElement("div");
   var timetxt = document.createTextNode(d);
   timespan.className = "timespan";
   timespan.appendChild(timetxt);
