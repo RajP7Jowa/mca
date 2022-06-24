@@ -145,24 +145,21 @@ input {
 .addBtn:hover {
   background-color: #bbb;
 }
+.timespan {
+  color: gray;
+  font-size: small;
+}
 </style>
 </head>
 <body>
 
 <div id="myDIV" class="header">
   <h2 style="margin:5px">My To Do List</h2>
-  <input type="text" id="myInput" placeholder="Title...">
+  <input type="text" id="myInput" placeholder="Work title...">
   <span onclick="newElement()" class="addBtn">Add</span>
 </div>
-
-<ul id="myUL">
-  <li>Hit the gym</li>
-  <li class="checked">Pay bills</li>
-  <li>Meet George</li>
-  <li>Buy eggs</li>
-  <li>Read a book</li>
-  <li>Organize office</li>
-</ul>
+<!-- my todo list -->
+<ul id="myUL"></ul>
 
 <script>
 // Create a "close" button and append it to each list item
@@ -197,7 +194,15 @@ list.addEventListener('click', function(ev) {
 // Create a new list item when clicking on the "Add" button
 function newElement() {
   var li = document.createElement("li");
+  var d = new Date().toLocaleTimeString();
+  var timespan = document.createElement("code");
+  var timetxt = document.createTextNode(d);
+  timespan.className = "timespan";
+  timespan.appendChild(timetxt);
+  li.appendChild(timespan);
+
   var inputValue = document.getElementById("myInput").value;
+  
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
